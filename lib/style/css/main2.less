@@ -191,13 +191,22 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
 }
 
 .content-today{background: linear-gradient(to bottom, @wh , @gy-l1); }
-.panel-tody-tv{
-    .panel-heading{ .bg-bl-d5; .bdr(0); .fixfloat; .t-wh; 
+.panel-tody-tv{position: relative; height:388px; overflow: hidden; .bdr(0);
+    .carousel{position: absolute; top:0; left:0; right:0;
+        .item{width: 100%;
+            img{width:100%;}
+        }
+    }
+    .panel-heading{ background-color:fade(@bk,50%); .bdr(0); .fixfloat; .t-wh;  position: relative; z-index: 1; opacity: 1;.ani;
         .desc{float: left;padding-right:10px; font-weight: bold;}
         .date{float: left;}
         .more{float: right;.t-wh;}
     }
-    .panel-body{.bg-bl-d4; padding:0; height:344px; }
+    .panel-body{background-color:fade(@bl-d5,80%); padding:0; height:344px; position: relative; z-index: 1; opacity: 0; .ani;}
+    &:hover{
+        .panel-heading{opacity: 1;  background-color:fade(@bl-d6,90%);}
+        .panel-body{opacity: 1;}
+    }
     .today-tv-title{.fixfloat; padding:1rem; .bg-gy-l2;.bdr;
         .date{float: left; font-size: 1.1rem; .t-gy-d5;
             .fa{margin-right:.5rem;}
@@ -205,16 +214,14 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         .more{ .t-gy-d5; float: right;}
     }
     .today-tv-list{ 
-        li{font-size: 1.1rem; .t-wh; padding:0 6rem 0 1rem; position: relative; line-height: 3rem; border-bottom: 1px dotted @gy-l2;.thidden;
+        li{font-size: 1.1rem; .t-wh; padding:0 6rem 0 1rem; position: relative; line-height: 3rem; border-bottom: 1px dotted fade(@wh,30%);.thidden;
             a{color:fade(@wh,90%);
                 .desc-chs{ font-weight: bold;}
                 .desc-eng{color:fade(@wh,50%);}
                 .episode{position: absolute; right:1rem;  }
             }
-            &:hover{.bg-wh;
-                a{.t-bl-m5;
-                    .desc-chs{.t-bl-l5;}
-                }
+            &:hover{background-color:fade(@wh,50%);
+               
             }
         }
     }
