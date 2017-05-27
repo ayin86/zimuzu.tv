@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<script src="../lib/init/loadFiles.js"></script>
+<style type="text/css">
+.title{font-size: 3rem; font-weight:bold;text-transform:uppercase; text-indent: 1rem; color:#333; margin-top:3rem;}
+.color-wrapper .title-sub{font-size: 2rem;  text-indent: 1rem; color:#999;}
+.color-wrapper{border: 1px dotted #ddd;padding:1rem; margin:1rem; display:block;}
+.color-wrapper .color-group{display:table;width: 100%;}
+.color-wrapper .color-group li{width:3rem;height:3rem; text-shadow: 0 0 1px #666; background-color: #000; display:table-cell; margin:.5rem;line-height: 3rem; color:#fff; text-align: center;}
+
+.color-row{display:table;width:100%;}
+.color-row .color-column{display:table-cell; width: 1%; height: 100px;}
+.color-row .color-column .title1st{background-color: #333; font-size: 3rem; font-weight:bold;text-transform:uppercase; text-indent: 1rem; color:#fff; padding:3rem 0; }
+.color-row .css-color{}
+.color-row .js-color{}
+
+</style>
+
+</head>
+<body class="">
+	<div class="color-row">
+		<div class="css-color color-column">
+			<p class="title1st bg-blue-">CSS Color</p>
+		</div>
+		<div class="js-color color-column">
+			<p class="title1st">JS Color</p>
+		</div>
+	</div>
+	
+	<div class="color-row">
+		<div class="css-color-h color-column">
+			<p class="title1st bg-blue-">CSS Color H</p>
+		</div>
+		<div class="js-color-h color-column">
+			<p class="title1st">JS Color H</p>
+		</div>
+	</div>
+</body>
+</html>
+<script src="../lib/init/loadFiles-after.js"></script>
+<script>
+	var red="#ff000";
+$(function(){
+   //var colors=["red","ro","orange","oy","yellow","yc","chartreuse","cg","green","ga","aquamarine","ac","cyan","cb","blue","bi","indigo","ip","purple","pp","pink","pv","violetred","vr","gray"];
+   var colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","bl","bi","in","ip","pu","pp","pi","pv","vi","vr","gy"];
+   var sort=["l","m","d"];
+   var sortH=["hl","hm","hd"];
+//css color
+   for(i=0;i<colors.length;i++){
+   	$(".css-color").append("<p class='title'>"+(i+1)+" "+colors[i]+"</p>");
+   	$(".css-color").append("<div class='color-wrapper "+colors[i]+"-wrapper'></div>");
+   	for(j=0;j<sort.length;j++){
+   		$(".css-color").find("."+colors[i]+"-wrapper").append("<p class='title-sub'>"+colors[i]+"-"+sort[j]+"</p>");
+   		$(".css-color").find("."+colors[i]+"-wrapper").append("<ul class='color-group "+colors[i]+"-"+sort[j]+"'></ul>");
+   		for(k=1;k<10;k++){
+   			$(".css-color").find("."+colors[i]+"-"+sort[j]).append("<li class='bg-"+colors[i]+"-"+sort[j]+k+"'>"+k+"</li>")
+   		}
+   	}
+   }
+//js color 
+   for(i=0;i<colors.length;i++){
+   	$(".js-color").append("<p class='title'>"+(i+1)+" "+colors[i]+"</p>");
+   	$(".js-color").append("<div class='color-wrapper "+colors[i]+"-wrapper'></div>");
+   	for(j=0;j<sort.length;j++){
+   		$(".js-color").find("."+colors[i]+"-wrapper").append("<p class='title-sub'>"+colors[i]+"_"+sort[j]+"</p>");
+   		$(".js-color").find("."+colors[i]+"-wrapper").append("<ul class='color-group "+colors[i]+"-"+sort[j]+"'></ul>");
+   		for(k=1;k<10;k++){
+			$(".js-color").find("."+colors[i]+"-"+sort[j]).append("<li class='js-"+colors[i]+"-"+sort[j]+k+"'>"+k+"</li>")
+			$(".js-color").find("."+"js-"+colors[i]+"-"+sort[j]+k).css({background:eval(colors[i]+"_"+sort[j]+k)}); 
+   		}
+   	}
+   }
+//css color H
+   for(i=0;i<colors.length;i++){
+   	$(".css-color-h").append("<p class='title'>"+(i+1)+" "+colors[i]+"-H"+"</p>");
+   	$(".css-color-h").append("<div class='color-wrapper "+colors[i]+"-wrapper'></div>");
+   	for(j=0;j<sortH.length;j++){
+   		$(".css-color-h").find("."+colors[i]+"-wrapper").append("<p class='title-sub'>"+colors[i]+"-"+sortH[j]+"</p>");
+   		$(".css-color-h").find("."+colors[i]+"-wrapper").append("<ul class='color-group "+colors[i]+"-"+sortH[j]+"'></ul>");
+   		for(k=1;k<10;k++){
+   			$(".css-color-h").find("."+colors[i]+"-"+sortH[j]).append("<li class='bg-"+colors[i]+"-"+sortH[j]+k+"'>"+k+"</li>")
+   		}
+   	}
+   }
+//js color H
+   for(i=0;i<colors.length;i++){
+   	$(".js-color-h").append("<p class='title'>"+(i+1)+" "+colors[i]+"-H"+"</p>");
+   	$(".js-color-h").append("<div class='color-wrapper "+colors[i]+"-wrapper'></div>");
+   	for(j=0;j<sort.length;j++){
+   		$(".js-color-h").find("."+colors[i]+"-wrapper").append("<p class='title-sub'>"+colors[i]+"_"+sortH[j]+"</p>");
+   		$(".js-color-h").find("."+colors[i]+"-wrapper").append("<ul class='color-group "+colors[i]+"-"+sortH[j]+"'></ul>");
+   		for(k=1;k<10;k++){
+			if(colors[i]!="gray"&&colors[i]!="gy"){
+				$(".js-color-h").find("."+colors[i]+"-"+sortH[j]).append("<li class='js-"+colors[i]+"-"+sortH[j]+k+"'>"+k+"</li>")
+				$(".js-color-h").find("."+"js-"+colors[i]+"-"+sortH[j]+k).css({background:eval(colors[i]+"_"+sortH[j]+k)}); 
+			}
+   		}
+   	}
+   }
+   $(".js-color-h,.css-color-h").find(".gray-wrapper,.gy-wrapper").prev().remove().end().remove();
+});
+</script>

@@ -1,0 +1,20 @@
+@charset "utf-8";
+@IMPORT url("3rd/icons.css");
+@IMPORT url("3rd/animate.css");
+@IMPORT url("3rd/widgets.css");
+/*
+@IMPORT url("home.css");
+@IMPORT url("portlet.css");
+@IMPORT url("theme.css");
+@IMPORT url("fixed.css");
+@IMPORT url("login.css");
+*/
+html{font-size:14px;}
+body { background:#fff; padding: 0;margin: 0; color:#666; font: 14px/150%  "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;-webkit-text-size-adjust: none; -webkit-font-smoothing: antialiased;}
+ul{margin:0; padding:0;}
+li{list-style: none;}
+a{blr:expression(this.onFocus=this.blur()); cursor: pointer;text-decoration: none;}
+a,input,button{outline:none!important;}
+a:hover {text-decoration: none;}
+embed{display:none;}
+.iframe-wrap{position: absolute; left:-10000px; top:-10000px;}
