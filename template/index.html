@@ -214,45 +214,59 @@
 				          <div class="carousel-inner">
 				            <div class="item active">
 				              <img src="../lib/style/images/tvplay/tvplay1.jpg" data-holder-rendered="true">
+			              	  <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay2.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay3.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay4.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay5.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay6.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay7.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay8.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay9.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay10.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay11.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay12.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay13.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				            <div class="item">
 				              <img src="../lib/style/images/tvplay/tvplay14.jpg" data-holder-rendered="true">
+				              <div class="episode-info">episode info</div>
 				            </div>
 				          </div>
 				        </div>
@@ -381,7 +395,6 @@
 							<span class="desc">24小时热门下载</span>
 						</div>
 						<div class="panel-body">
-							
 							<ul class="play-list" >
 		                        <li>
 		                            <div class="img-item">
@@ -566,6 +579,21 @@
 					</div>
 				</div>
 			</div><!--row end-->
+			
+			<div class="row row-content">
+				<div class="col-xs-12 col-box">
+					<div class="panel">
+						<div class="panel-heading">
+							<span class="desc">热门评论</span>
+						</div>
+						<div class="panel-body">
+							
+		                    
+						</div>
+					</div>
+				</div>
+			</div>
+			
 		</div><!--ui-limit end-->
 	</div><!--ui-content end-->
 	<div class="ui-content" style="display:none;">
@@ -659,6 +687,29 @@ $(function(){
 	      onScroll: function(){$.timer.set("scrollWrapper",function(){$("body").css({overflow:""})},1000);}//滚动完毕，一秒后重新启用body滚动
 		}
 	});
+	
+	
+	$('#tvshow-slide').find(".carousel-inner .item").each(function(i,item){
+		$(item).find(".episode-info").html($(".today-tv-list li").eq(i).html());
+	})
+	
+	
+	
+	/*
+	$(".tv-episode-info").html($(".today-tv-list li").eq(0).html()).addClass("show-info")
+	$('#tvshow-slide').on({'slide.bs.carousel':function(){
+		$(".tv-episode-info").removeClass("show-info");
+	},
+	'slid.bs.carousel':function(){
+		$('#tvshow-slide').find(".carousel-inner .item").each(function(i,item){
+			if($(item).hasClass("active")){
+				$(".tv-episode-info").html($(".today-tv-list li").eq(i).html()).addClass("show-info");
+			}
+		})
+		
+	}
+	})*/
+	
 })
 /*
 

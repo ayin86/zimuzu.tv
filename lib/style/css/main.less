@@ -46,7 +46,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         .logo{height:40px;}
         .logo-bg{position: absolute; height:70px; top:-5px; left:50%; z-index: -1; .fix-cx;}
     }
-    >.ui-nav{display:inline; white-space: nowrap; margin:0 1.5rem; .fixfloat; float:left;
+    .ui-nav{display:inline; white-space: nowrap; margin:0 1.5rem; .fixfloat; float:left;
         >li{display:inline-block; line-height: 60px; float: left; padding:0 10px; font-size: 1rem; color:@wh;cursor: pointer; 
             &:hover{background-color: fade(@wh,10%);}
             &.active{position: relative; overflow: hidden;
@@ -164,7 +164,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
             .panel{box-shadow:none; .bg-tr; .bdr(0);
                 .panel-heading{ padding:0; text-align: center; font-size: 1.4rem; line-height: 4rem; position: relative;
                     &:after{position: absolute; width:100%; height:1px;font-size: 0; top:50%; left:0; content:" "; background-color:@gy-l2 ;}
-                    .desc{background-color: @wh; z-index: 2; position: relative; padding:0 2rem;}
+                    .desc{background-color: @wh; z-index: 2; position: relative; padding:0 1rem;}
                 }
                 .panel-body{padding:0;}
                 &.panel-tody-tv{}
@@ -176,22 +176,25 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
 
 .play-list{white-space: normal;  padding:0; margin:0 -.8rem; font-size: 0; 
   >li{display:inline-block; white-space: nowrap; position: relative; margin-bottom:10px; width: 14.2857%;padding:0 .8rem;
-    .img-item{line-height:0;overflow: hidden;cursor: pointer; position: relative;  padding:0; margin: 0 auto; text-align: center; 
-      img{  width: 100%; max-width:100%; height:144px;}
-      .count,.type{position: absolute; border: 1px solid fade(@wh,30%); right:-17px; top:-5px; width: 50px; color:@wh;line-height: 1rem;padding: 8px 0 3px 0; background-color: fade(@bk,50%); text-align: center; transform:rotate(45deg);font-family: arial;font-size: 12px;}
+    .img-item{line-height:0;overflow: hidden;cursor: pointer; position: relative;  padding:0; margin: 0 auto; text-align: center; .ani;
+      img{  width: 100%; max-width:100%; height:144px; .ani; position: relative;}
+      .count,.type{position: absolute; z-index: 10; border: 1px solid fade(@wh,30%); right:-17px; top:-5px; width: 50px; color:@wh;line-height: 1rem;padding: 8px 0 3px 0; background-color: fade(@bk,50%); text-align: center; transform:rotate(45deg);font-family: arial;font-size: 12px; .ani;}
       .type{ right:auto; top:auto; width: 70px; left:-24px;  bottom:-4px; padding:3px 0 14px 0;}
       .desc{position: absolute; .fullbox; background-color: fade(@bk,50%);  padding:30px 0 0 0;
         p{line-height: 2rem; margin:0; color:@wh;}
       }
-      &:after{content:" "; position: absolute; top:0; right:0; bottom:0; left:0; background-color:fade(@wh,50%); opacity: 0; .ani;}
+      
+      //&:after{content:" "; position: absolute; top:0; right:0; bottom:0; left:0; background-color:fade(@wh,50%); opacity: 0; .ani;}
     }
     >.desc{font-size: 14px; line-height: 1.8rem; height: 3rem; padding-top:0px; font-weight: bold; text-align: center; color:@gy-d4;width: 100%;  margin: 0;.thidden; 
         &.desc-en{position: absolute;bottom:0;left:0;width:100%; height:1rem; color:@gy-m3; padding:0 .8rem; line-height: 1rem;font-weight: normal; }
     }
     &:nth-child(1),&:nth-child(2),&:nth-child(3){.count{background-color: fade(@re,80%); color:@wh;}}
     &:hover{
-        .img-item{
-            &:after{content:" "; opacity: 1;}
+        .img-item{ transform: scale(1.1);
+            //img{ transform: scale(1.1); opacity: .6;}
+            //&:after{content:" "; opacity: 1;}
+            .count,.type{opacity: 0;}
         }
     }
   }
@@ -203,6 +206,14 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     .carousel{position: absolute; top:0; left:0; right:0;
         .item{ width: 100%; overflow: hidden; height:388px;
             img{width:100%;}
+            .episode-info{position: absolute;bottom:44px; width: 100%;padding:0 6rem 0 1rem; line-height: 3rem; .t-wh; border-bottom: 1px solid fade(@wh,20%); background-color: fade(@bk,50%);.thidden; .ani;
+                a{.t-wh; 
+                    .desc-chs{font-weight: bold;}
+                    .desc-eng{color:fade(@wh,50%);}
+                    .episode{position: absolute; right:1rem;  }
+                }
+                &.show-info{opacity: 1; z-index: 1; visibility: visible;}
+            }
         }
         .carousel-indicators{width: 100%; left:0; margin-left:0; }
     }
@@ -220,7 +231,9 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     &:hover{
         .panel-heading{opacity: 1;  background-color:fade(@bl-d6,90%);}
         .panel-body{opacity: 1;}
+        .carousel{.episode-info{opacity: 0;}}
     }
+    
     .today-tv-list{
         li{font-size: 1.1rem; .t-wh; padding:0 6rem 0 1rem; position: relative; line-height: 3rem; border-bottom: 1px dotted fade(@wh,30%);.thidden;
             a{color:fade(@wh,90%);
