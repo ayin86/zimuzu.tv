@@ -41,7 +41,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
 //body{background-color: @gy-l1;}
 /*header css start*/
 .ui-limit{  width: 1200px; margin:0 auto; position: relative;}
-.ui-header{background-color:fade( @bl-m8,95%); height:60px; position: fixed; top:0;left:0; width: 100%; min-width: 1200px; z-index: 10;
+.ui-header{background-color:fade( @bl-m8,95%); height:60px; position: fixed; top:0;left:0; width: 100%; min-width: 1200px; z-index: 99;
     .ui-logo{position: absolute; left:50%;  top:10px;.fix-cx;
         .logo{height:40px;}
         .logo-bg{position: absolute; height:70px; top:-5px; left:50%; z-index: -1; .fix-cx;}
@@ -164,7 +164,11 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
             .panel{box-shadow:none; .bg-tr; .bdr(0);
                 .panel-heading{ padding:0; text-align: center; font-size: 1.4rem; line-height: 4rem; position: relative;
                     &:after{position: absolute; width:100%; height:1px;font-size: 0; top:50%; left:0; content:" "; background-color:@gy-l2 ;}
-                    .desc{background-color: @wh; z-index: 2; position: relative; padding:0 1rem;}
+                    .desc{background-color: @wh; z-index: 2; position: relative; padding:0 1rem;
+                        .btn-group{
+                            .multiselect{.bg-tr; font-size: 1.2rem; border: none;}
+                        }
+                    }
                 }
                 .panel-body{padding:0;}
                 &.panel-tody-tv{}
@@ -175,10 +179,10 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
 }
 
 .play-list{white-space: normal;  padding:0; margin:0 -.8rem; font-size: 0; 
-  >li{display:inline-block; white-space: nowrap; position: relative; margin-bottom:10px; width: 14.2857%;padding:0 .8rem;
-    .img-item{line-height:0;overflow: hidden;cursor: pointer; position: relative;  padding:0; margin: 0 auto; text-align: center; .ani;
-      img{  width: 100%; max-width:100%; height:144px; .ani; position: relative;}
-      .count,.type{position: absolute; z-index: 10; border: 1px solid fade(@wh,30%); right:-17px; top:-5px; width: 50px; color:@wh;line-height: 1rem;padding: 8px 0 3px 0; background-color: fade(@bk,50%); text-align: center; transform:rotate(45deg);font-family: arial;font-size: 12px; .ani;}
+  >li{display:inline-block; position: relative; margin-bottom:10px; width: 16.66666%;padding:0 .8rem; .ani;
+    .img-item{line-height:0;overflow: hidden;cursor: pointer; position: relative;  padding:0; margin: 0 auto; text-align: center;
+      img{ width: 100%; max-width:100%; height: 180px;  .ani; position: relative;}
+      .count,.type{position: absolute; z-index: 1; border: 1px solid fade(@wh,30%); right:-17px; top:-5px; width: 50px; color:@wh;line-height: 1rem;padding: 8px 0 3px 0; background-color: fade(@bk,50%); text-align: center; transform:rotate(45deg);font-family: arial;font-size: 12px; .ani;}
       .type{ right:auto; top:auto; width: 70px; left:-24px;  bottom:-4px; padding:3px 0 14px 0;}
       .desc{position: absolute; .fullbox; background-color: fade(@bk,50%);  padding:30px 0 0 0;
         p{line-height: 2rem; margin:0; color:@wh;}
@@ -186,13 +190,13 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
       
       //&:after{content:" "; position: absolute; top:0; right:0; bottom:0; left:0; background-color:fade(@wh,50%); opacity: 0; .ani;}
     }
-    >.desc{font-size: 14px; line-height: 1.8rem; height: 3rem; padding-top:0px; font-weight: bold; text-align: center; color:@gy-d4;width: 100%;  margin: 0;.thidden; 
+    >.desc{font-size: 14px; line-height: 1.8rem; height: 3rem; padding-top:0px; font-weight: bold; text-align: center; color:@gy-d5;width: 100%;  margin: 0;.thidden; 
         &.desc-en{position: absolute;bottom:0;left:0;width:100%; height:1rem; color:@gy-m3; padding:0 .8rem; line-height: 1rem;font-weight: normal; }
     }
     &:nth-child(1),&:nth-child(2),&:nth-child(3){.count{background-color: fade(@re,80%); color:@wh;}}
-    &:hover{
-        .img-item{ transform: scale(1.1);
-            //img{ transform: scale(1.1); opacity: .6;}
+    &:hover{transform: scale(1.1);
+        .img-item{ //transform: scale(1.1);
+            img{ transform: scale(1.1);}
             //&:after{content:" "; opacity: 1;}
             .count,.type{opacity: 0;}
         }
@@ -200,6 +204,57 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
   }
   &.play-list-col3{li{width:33.33333333333%;>.desc{}}}
 }
+
+.info-list{white-space: normal;  padding:0; margin:0 -.8rem; font-size: 0; 
+    >li{display:inline-block;  position: relative; margin-bottom:10px; width: 25%;padding:0 .8rem .8rem .8rem; .ani;
+        .img-item{line-height:0;overflow: hidden;cursor: pointer; position: relative;  padding:0; margin: 0 auto; text-align: center;
+            img{ width: 100%; max-width:100%; height: 157px; .ani; position: relative;}
+            .tags{position: absolute; overflow: hidden; opacity: 0; color:fade(@wh,90%); line-height: 1rem; margin:0; top:0; right:0; bottom:0; left:0; width: 100%; z-index: 1;  background-color: fade(@bk,80%);   .ani;
+                .title,.type{position: absolute; left:0; right:0; }
+                .title{font-size: 1.5rem; font-weight: bold; top:60px;}
+                .type{font-size: 1rem; font-weight: normal; top:90px;
+                    &:before{content:"—";} &:after{content:"—";}
+                }
+                .bottom{float: right;  font-size: 1rem;  font-weight: normal; position: absolute; bottom:.3rem;  right:.5rem;
+                    li{display:inline-block; color:fade(@wh,50%);}
+                    .user{}
+                    .date{}
+                }
+            }
+        }
+        .desc{  font-size: 1rem; font-weight: bold; line-height: 2rem;text-align: left; color:@gy-d9;width: 100%;  margin: 0; .thidden;}
+        &:nth-child(1),&:nth-child(2),&:nth-child(3){width: 33.3333333%; 
+            .img-item{
+                img{height: 213px;}
+                .tags{font-size: 1.8rem; padding-top:60px;
+                    .title{top:70px;}
+                    .type{top:100px;}
+                }
+            }
+            .desc{font-size: 1.2rem;}
+        }
+        &:hover{transform: scale(1.1);
+            .img-item{
+                img{ transform: scale(1.2);}
+                .tags{opacity: 1;}
+            }
+        }
+    }
+}
+
+/*
+<ul class="info-list">
+    <li>
+        <div class="img-item">
+            <span class="count">14</span>
+            <span class="type">电影</span>
+            <img src="../lib/style/images/info/info1.jpg" alt="">
+        </div>
+        <p class="desc">《神奇女侠》：故事可以给差评，但尬不住加朵腿长</p>
+        <p class="desc desc-en">楽-子 发表于 2017-06-08 22:05 (1天前 22:05)</p>
+    </li>
+</ul>
+*/
 
 //.content-today{background: linear-gradient(to bottom, @wh , @gy-l1); }
 .panel-tody-tv{position: relative; height:388px; .bdr(0); box-shadow: none; margin-bottom:40px;
@@ -251,7 +306,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     .panel-body{.bg-gy-l1;}
 }
 .client-list{ font-size: 0; padding:12px;
-    li{display: inline-block; position: relative; width: 50%; cursor: pointer; text-align: center; height:180px; padding:12px; .ani;  
+    li{display: inline-block; position: relative; width: 50%; cursor: pointer; text-align: center; height:220px; padding:12px; .ani;  
         .fa{font-size: 3rem; width:100%; height:80px; .bdr; padding-top:18px; .t-bl;.ani; }
         .title{font-size: 1.2rem; .t-gy-d3; .ani; }
         .desc{font-size: .8rem; .t-gy-m3;.ani; }

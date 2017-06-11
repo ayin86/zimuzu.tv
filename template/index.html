@@ -89,7 +89,7 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-                    		<ul class="tags">
+                    		<ul class="bottom">
 	                        <li><p>0</p><p>动态</p></li>
 	                        <li><p>68</p><p>评论</p></li>
 	                        <li><p>35</p><p>积分</p></li>
@@ -99,13 +99,13 @@
                     <li class="divider"></li>
                     <li class="title">我要发布：</li>
                     <li>
-                    		<ul class="tags">
+                    		<ul class="bottom">
                     			<li>新闻资讯</li>
 		                    <li>收视快报</li>
 		                    <li>新剧评测</li>
 		                    <li>片单推荐</li>
                     		</ul>
-                    		<ul class="tags">
+                    		<ul class="bottom">
                     			<li>剧评</li>
                     			<li>影评</li>
 		                    <li>字幕</li>
@@ -117,7 +117,7 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-	                    	<ul class="tags">
+	                    	<ul class="bottom">
 	                        <li><i class="fa fa-gear"></i> 个人设置</li>
 	                        <li><i class="fa fa-star"></i> 收藏</li>
 	                        <li><i class="fa fa-sign-out"></i> 退出登录</li>
@@ -164,19 +164,19 @@
 				          </ol>
 				          <div class="carousel-inner">
 				            <div class="item" role="listbox" onclick="window.open('http://www.zimuzu.tv/');">
-				              <img src="../lib/style/images/banner-n/banner01.png" data-holder-rendered="true">
+				              <img src="../lib/style/images/banner/banner01.png" data-holder-rendered="true">
 				            </div>
 				            <div class="item active" onclick="window.open('http://www.zimuzu.tv/');">
-				              <img src="../lib/style/images/banner-n/banner02.png" data-holder-rendered="true">
+				              <img src="../lib/style/images/banner/banner02.png" data-holder-rendered="true">
 				            </div>
 				            <div class="item" onclick="window.open('www.zimuzu.tv');">
-				              <img src="../lib/style/images/banner-n/banner03.png" data-holder-rendered="true">
+				              <img src="../lib/style/images/banner/banner03.png" data-holder-rendered="true">
 				            </div>
 				            <div class="item" onclick="window.open('http://www.zimuzu.tv/');">
-				              <img src="../lib/style/images/banner-n/banner04.png" data-holder-rendered="true">
+				              <img src="../lib/style/images/banner/banner04.png" data-holder-rendered="true">
 				            </div>
 				            <div class="item" onclick="window.open('http://www.zimuzu.tv/');">
-				              <img src="../lib/style/images/banner-n/banner05.png" data-holder-rendered="true">
+				              <img src="../lib/style/images/banner/banner05.png" data-holder-rendered="true">
 				            </div>
 				          </div>
 				          <a class="left carousel-control" href="#ui-banner" role="button" data-slide="prev">
@@ -503,7 +503,7 @@
 		                            <p class="desc">飓风营救</p>
 		                            <p class="desc desc-en">Taken</p>
 		                        </li>
-		                        <li>
+		                        <!--<li>
 		                            <div class="img-item">
 		                                <span class="count">13</span>
 		                                <span class="type">美剧</span>
@@ -521,7 +521,7 @@
 		                            <p class="desc">血战钢锯岭</p>
 		                            <p class="desc desc-en">Hacksaw Ridge</p>
 		                        </li>
-		                        <!--<li>
+		                        <li>
 		                            <div class="img-item">
 		                                <span class="count">15</span>
 		                                <span class="type">电影</span>
@@ -542,7 +542,7 @@
 	                    		</ul>
 						</div>
 					</div>
-				</div>
+				</div><!--col-xs-9 end-->
 				
 				
 				<div class="col-xs-3  col-box">
@@ -554,23 +554,23 @@
 							<ul class="client-list">
 								<li>
 									<div class="icon"><i class="fa fa-windows"></i></div>
-									<p class="title">Windows</p>
+									<p class="title">Windows<br/>客户端</p>
 									<p class="desc">适用于Win7以上的个人电脑</p>
 								</li>
 								<li>
 									<div class="icon"><i class="fa fa-apple"></i></div>
-									<p class="title">MAC</p>
+									<p class="title">Mac<br/>客户端</p>
 									<p class="desc">适用于运行OSX系统的苹果电脑</p>
 								</li>
 								<li>
 									<img class="qr-code" src="../lib/style/images/code-APP.png" alt="" />
 									<div class="icon"><i class="fa fa-mobile-phone"></i></div>
-									<p class="title">手机APP</p>
+									<p class="title">人人影视<br/>手机APP</p>
 									<p class="desc">手机扫码直接进行下载安装</p>
 								</li>
 								<li>
 									<div class="icon"><i class="fa fa-ellipsis-h"></i></div>
-									<p class="title">更多客户端</p>
+									<p class="title">更多<br/>客户端</p>
 									<p class="desc">TV版、IOS版、网页版H5等</p>
 								</li>
 								
@@ -584,10 +584,232 @@
 				<div class="col-xs-12 col-box">
 					<div class="panel">
 						<div class="panel-heading">
-							<span class="desc">热门评论</span>
+							<span class="desc">热门资讯 
+								<select id="example-getting-started" multiple="multiple">
+								    <option value="moviecomment" selected="selected">影评</option>
+								    <option value="tvplaycomment" selected="selected">剧评</option>
+								    <option value="newtpc" selected="selected">新剧评测</option>
+								    <option value="tvplay" selected="selected">片单</option>
+								    <option value="news" selected="selected">新闻</option>
+								    <option value="other" selected="selected">其他</option>
+								</select>
+							</span>
 						</div>
 						<div class="panel-body">
-							
+							<ul class="info-list">
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">神奇女侠</span>
+											<span class="type">电影</span>
+											<ul class="bottom">
+												<li class="user">By 楽-子</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info1.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">故事可以给差评，但尬不住加朵腿长</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">古战场传奇</span>
+											<span class="type">美剧</span>
+											<ul class="bottom">
+												<li class="user">By xiahcircle</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info2.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">男主商谈加盟狮门影业喜剧电影</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">自杀小队2</span>
+											<span class="type">电影</span>
+											<ul class="bottom">
+												<li class="user">By Gallagher驾到</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info15.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">《自杀小队2》2018年开拍，导演是？！</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">生吃</span>
+											<span class="type">美剧</span>
+											<ul class="bottom">
+												<li class="user">By 楽-子</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info3.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">不骗你，饿急了连人都能生吃</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">权力的游戏</span>
+											<span class="type">美剧</span>
+											<ul class="bottom">
+												<li class="user">By xiahcircle</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info4.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">HBO确认《权力的游戏》前传及最终季计划</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">DC漫画电影</span>
+											<span class="type">电影</span>
+											<ul class="bottom">
+												<li class="user">By 摇曳</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info5.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">盘点DC漫改电影票房口碑的起起落落</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">加勒比海盗：死无对证</span>
+											<span class="type">电影</span>
+											<ul class="bottom">
+												<li class="user">By 溺水的大象</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info6.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">想看海盗史诗，结果看了部童话</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">神奇女侠</span>
+											<span class="type">电影</span>
+											<ul class="bottom">
+												<li class="user">By 史歌</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info7.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">获得六神祝福的完美而强大的女人</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">异形：契约</span>
+											<span class="type">电影</span>
+											<ul class="bottom">
+												<li class="user">By zhangwuji18</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info8.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">超前点映观后感</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">海豹突击队</span>
+											<span class="type">美剧</span>
+											<ul class="bottom">
+												<li class="user">By Mentos!</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info9.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">秋季新剧前瞻：《海豹突击队》，这世界上最Man最帅的男人</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">美剧推荐</span>
+											<span class="type">美剧</span>
+											<ul class="bottom">
+												<li class="user">By Gallagher驾到</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info10.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">周二收视速递</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">神奇女侠</span>
+											<span class="type">电影</span>
+											<ul class="bottom">
+												<li class="user">By Gallagher驾到</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info11.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">火遍全球，续集导演待定</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">反恐特警队</span>
+											<span class="type">美剧</span>
+											<ul class="bottom">
+												<li class="user">By Mentos!</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info12.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">秋季新剧前瞻：摩根加入《反恐特警队》继续踹门</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">太空村</span>
+											<span class="type">美剧</span>
+											<ul class="bottom">
+												<li class="user">By 弄摩</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info13.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">这是恶搞版的《星际迷航》吗？</p>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="tags">
+											<span class="title">神奇女侠</span>
+											<span class="type">电影</span>
+											<ul class="bottom">
+												<li class="user">By opllx</li>
+												<li class="date">1天前</li>
+											</ul>
+										</div>
+		                                 <img src="../lib/style/images/info/info14.jpg" alt="">
+		                            </div>
+	                            		<p class="desc">“大道至简”的故事，永远讲不腻</p>
+								</li>
+								
+								
+							</ul>
 		                    
 						</div>
 					</div>
@@ -602,7 +824,7 @@
 				<div class="col-xs-6  col-box">
 					<div class="panel panel-comment">
 						<div class="panel-heading">
-							<span class="desc">热门评论</span>
+							<span class="desc">热门评论 </span>
 						</div>
 						<div class="panel-body">
 							<div class="film-comment">
@@ -694,7 +916,13 @@ $(function(){
 	})
 	
 	
-	
+	 $('#example-getting-started').multiselect({
+	 	 allSelectedText: '全部类型',
+	 	 selectAllText: '全部类型',
+	 	 includeSelectAllOption: true,
+         selectAllValue:1
+
+	 });
 	/*
 	$(".tv-episode-info").html($(".today-tv-list li").eq(0).html()).addClass("show-info")
 	$('#tvshow-slide').on({'slide.bs.carousel':function(){
