@@ -40,14 +40,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
 
 //body{background-color: @gy-l1;}
 /*header css start*/
-.carousel-fade{
-    .carousel-inner{position: relative; width: 100%; min-height:300px; 
-        .item{ .ani; opacity:0; width: 100%;  display:block!important; position: absolute; left:0; top:0; z-index: -1;
-            &.active{ opacity: 1; z-index: 1;}
-        }
-    }
-    .carousel-control{z-index:2;}
-} 
+
 
 .ui-limit{  width: 1200px; margin:0 auto; position: relative;}
 .ui-header{background-color:fade( @bl-m8,95%); height:60px; position: fixed; top:0;left:0; width: 100%; min-width: 1200px; z-index: 99;
@@ -149,7 +142,14 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         }
     }
 }
-
+.carousel-fade{
+    .carousel-inner{position: relative; width: 100%; min-height:300px; 
+        .item{ .ani; opacity:0; width: 100%;  display:block!important; position: absolute; left:0; top:0; z-index: -1;
+            &.active{ opacity: 1; z-index: 1;}
+        }
+    }
+    .carousel-control{z-index:2;}
+} 
 
 .ui-content{width: 100%; 
     &.content-top{padding-top:80px;}
@@ -215,7 +215,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     &:nth-child(1),&:nth-child(2),&:nth-child(3){.count{background-color: fade(@re,80%); color:@wh;}}
     &:hover{
         .img-item{transform: scale(1.05);
-            img{ transform: scale(1.1);}
+            img{ transform: scale(1.05);}
             //&:after{content:" "; opacity: 1;}
             .count,.type{opacity: 0;}
         }
@@ -224,10 +224,11 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
   &.play-list-col3{li{width:33.33333333333%;>.desc{}}}
 }
 
+//25%=159   20%=126
 .info-list{white-space: normal;  padding:0; margin:0 -.6rem; font-size: 0;  position: relative;
-    >li{display:inline-block;  position: relative; margin-bottom:0px; width: 25%;padding:0 .6rem .6rem .6rem;
-        .img-item{line-height:0;overflow: hidden; height:125px; cursor: pointer; position: relative;  padding:0; margin: 0 auto; text-align: center; .ani;
-            img{ width: 100%; max-width:100%;  .ani; position: relative; height:157px;}
+    >li{display:inline-block;  position: relative; margin-bottom:0px; width: 20%;padding:0 .6rem .6rem .6rem;
+        .img-item{line-height:0;overflow: hidden; cursor: pointer; position: relative;  padding:0; margin: 0 auto; text-align: center; .ani;
+            img{width: 100%; .ani; position: relative;}
             .tags{position: absolute; overflow: hidden; opacity: 0; color:fade(@wh,90%); line-height: 1rem; margin:0; top:0; right:0; bottom:0; left:0; width: 100%; z-index: 1;  background-color: fade(@bk,80%);   .ani;
                 .title,.type{position: absolute; left:0; right:0; }
                 .title{font-size: 1.5rem; font-weight: bold; top:40px;}
@@ -249,34 +250,73 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         
         &:hover{
             .img-item{transform: scale(1.05);
-                img{ transform: scale(1.1);}
+                img{ transform: scale(1.05);}
                 .tags{opacity: 1;}
             }
         }
     }
+    
+   &.info-list-A1-banner{
+       >li{width: 20%;
+            .img-item{ height:140px; overflow: hidden;
+                img{ height:140px; width: auto; max-width:none; position: relative; left:50%; .fix-cx;}
+            }   
+        }
+        &:before{width: 40%; float: left; content:" "; height:320px;} 
+    }
     &.info-list-A1{>li{width: 20%;
-        .img-item{ height:auto;
-            img{ height:126px;}
+        .img-item{ height:140px; overflow: hidden;
+            img{ height:140px; width: auto; max-width:none; position: relative; left:50%; .fix-cx;}
         }   
         &:nth-child(1){width: 40%; float: left;
-            .img-item{overflow: hidden; text-align: center;
-                img{width: auto; max-width: 150%; height: 288px; left:50%; position: relative; .fix-cx;}
+            .img-item{overflow: hidden; text-align: center; height:auto;
+                img{width: auto; max-width: 150%; height: 315px; left:50%; position: relative; .fix-cx;}
                 .tags{font-size: 1.8rem; padding-top:60px;
                     .title{top:120px;}
                     .type{top:150px;}
                 }
             }
-            &:hover{.img-item{img{ transform: scale(1.1) translateX(-50%);}}}
+            &:hover{.img-item{img{}}}
         } 
     }}
-    &.info-list-A2{>li{width: 25%;
-        .img-item{ height:125px; overflow: hidden;
-            img{height: 157px;}
-        }    
+    &.info-list-A2{>li{width: 20%;
+        .img-item{overflow: hidden;
+            img{ width: 100%; max-width:none; }
+        }
+        &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4){width: 25%;
+            .img-item{overflow: hidden;
+                img{ height:159px;}
+            }
+        }
+    }}
+    &.info-list-A3{>li{width: 25%;
+        .img-item{ height:140px; overflow: hidden;
+            img{height: 158px; width: auto; max-width:none; }
+        }
+    }}
+    &.info-list-B1{>li{width:33.333333%;
+        .img-item{ height:230px; overflow: hidden;
+            img{display:inline-block; width:50%; height:115px; padding:1px; max-width:none; }
+            .tags{
+                .title{top:90px;}
+                .type{top:120px;}
+            }
+            //>:nth-child(2){float: left; height:308px; width: 59%; position: relative; top:50%; .fix-cy;} 
+        }
     }}
 }
-.chrome .info-list.info-list-A1 > li:nth-child(1) .img-item img{height:290px;}
+.chrome .info-list.info-list-A1 > li:nth-child(1) .img-item img{height:320px;}
 
+.info-banner{width: 470px; height:320px; position: absolute; left:0; top:0;
+    .carousel-inner{height:320px;
+        .item{
+            img{height:320px; width: auto; min-width:100%; max-width: none; position: relative; left:50%; .fix-cx;}
+            .carousel-caption{left:0; right:0; bottom:0; padding:10px; background-color: fade(@bk,50%);h3,p{margin:0;}}
+        }
+    }
+    .carousel-indicators{bottom:-35px;}
+    .carousel-control{top:110px;bottom:110px;}   
+}
 
 //.content-today{background: linear-gradient(to bottom, @wh , @gy-l1); }
 .panel-tody-tv{position: relative; height:388px; .bdr(0); box-shadow: none; margin-bottom:40px;
