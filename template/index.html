@@ -154,7 +154,7 @@
 				<div class="col-xs-9">
 					
 					<div class="ui-banner">
-						<div id="ui-banner" class="carousel carousel-fade" data-ride="carousel">
+						<div id="ui-banner" class="carousel slide" data-ride="carousel">
 				          <ol class="carousel-indicators">
 				            <li data-target="#ui-banner" data-slide-to="0" class="active"></li>
 				            <li data-target="#ui-banner" data-slide-to="1" class=""></li>
@@ -164,19 +164,19 @@
 				          </ol>
 				          <div class="carousel-inner">
 				            <div class="item active" role="listbox" onclick="window.open('http://www.zimuzu.tv/');">
-				              <img src="../lib/style/images/banner/banner01.png" data-holder-rendered="true">
+				              <img src="../lib/style/images/banner/banner01.jpg" data-holder-rendered="true">
 				            </div>
 				            <div class="item" onclick="window.open('http://www.zimuzu.tv/');">
-				              <img src="../lib/style/images/banner/banner02.png" data-holder-rendered="true">
+				              <img src="../lib/style/images/banner/banner02.jpg" data-holder-rendered="true">
 				            </div>
 				            <div class="item" onclick="window.open('www.zimuzu.tv');">
-				              <img src="../lib/style/images/banner/banner03.png" data-holder-rendered="true">
+				              <img src="../lib/style/images/banner/banner03.jpg" data-holder-rendered="true">
 				            </div>
 				            <div class="item" onclick="window.open('http://www.zimuzu.tv/');">
-				              <img src="../lib/style/images/banner/banner04.png" data-holder-rendered="true">
+				              <img src="../lib/style/images/banner/banner04.jpg" data-holder-rendered="true">
 				            </div>
 				            <div class="item" onclick="window.open('http://www.zimuzu.tv/');">
-				              <img src="../lib/style/images/banner/banner05.png" data-holder-rendered="true">
+				              <img src="../lib/style/images/banner/banner05.jpg" data-holder-rendered="true">
 				            </div>
 				          </div>
 				          <a class="left carousel-control" href="#ui-banner" role="button" data-slide="prev">
@@ -194,7 +194,7 @@
 				<div class="col-xs-3 col-box">
 					
 					<div class="panel panel-tody-tv">
-						<div id="tvshow-slide" class="carousel carousel-fade" data-ride="carousel">
+						<div id="tvshow-slide" class="carousel slide" data-ride="carousel">
 				          <ol class="carousel-indicators">
 				            <li data-target="#tvshow-slide" data-slide-to="0" class="active"></li>
 				            <li data-target="#tvshow-slide" data-slide-to="1" class=""></li>
@@ -593,9 +593,9 @@
 						    </ul>
 						</div>
 						<div class="panel-body">
-							<div class="tab-content ani-fade">
+							<div class="tab-content ani-slide">
 								<div class="content-1">
-									<div id="info-banner" class="info-banner carousel carousel-fade" data-ride="carousel">
+									<div id="info-banner" class="info-banner carousel slide" data-ride="carousel">
 							          <ol class="carousel-indicators">
 							            <li data-target="#info-banner" data-slide-to="0" class="active"></li>
 							            <li data-target="#info-banner" data-slide-to="1" class=""></li>
@@ -1248,7 +1248,7 @@ $(window).load(function(){
 			header:$(".tab-header"),
 			width:1200,
 			height:530,
-			ani:"fade",
+			ani:"slide",
 			interaction:"mouseover"
 		});
 	},1000)
