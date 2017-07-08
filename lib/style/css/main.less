@@ -246,7 +246,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
                 }
             }
         }
-        .desc{  font-size: 1rem; font-weight: bold; line-height: 2rem;text-align: center; color:@gy-d9;width: 100%;  margin: 0; .thidden;}
+        .desc{  font-size: 1rem; font-weight: bold; line-height: 2rem;text-align: center; color:@gy-d9; width: 100%;  margin: 0; .thidden;}
         
         &:hover{
             .img-item{transform: scale(1.05);
@@ -259,18 +259,18 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
    &.info-list-A1-banner{
        >li{width: 20%;
             .img-item{ height:140px; overflow: hidden;
-                img{ height:140px; width: auto; max-width:none; position: relative; left:50%; .fix-cx;}
+                img{ height:140px; width: 100%; max-width:none; position: relative; left:50%; .fix-cx;  object-fit: cover;}
             }   
         }
         &:before{width: 40%; float: left; content:" "; height:320px;} 
     }
     &.info-list-A1{>li{width: 20%;
         .img-item{ height:140px; overflow: hidden;
-            img{ height:140px; width: auto; max-width:none; position: relative; left:50%; .fix-cx;}
+            img{ height:140px; width: 100%; max-width:none; position: relative; left:50%; .fix-cx;  object-fit: cover;}
         }   
         &:nth-child(1){width: 40%; float: left;
             .img-item{overflow: hidden; text-align: center; height:auto;
-                img{width: auto; max-width: 150%; height: 315px; left:50%; position: relative; .fix-cx;}
+                img{width: 100%; max-width: 150%; height: 315px; left:50%; position: relative; .fix-cx;  object-fit: cover;}
                 .tags{font-size: 1.8rem; padding-top:60px;
                     .title{top:120px;}
                     .type{top:150px;}
@@ -280,29 +280,55 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         } 
     }}
     &.info-list-A2{>li{width: 20%;
-        .img-item{overflow: hidden;
-            img{ width: 100%; max-width:none; }
+        .img-item{overflow: hidden; height:130px;
+            img{ width: 100%; height:130px; max-width:none;  object-fit: cover;}
         }
         &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4){width: 25%;
-            .img-item{overflow: hidden;
-                img{ height:159px;}
+            .img-item{overflow: hidden; height:160px;
+                img{ height:160px;}
             }
         }
     }}
     &.info-list-A3{>li{width: 25%;
         .img-item{ height:140px; overflow: hidden;
-            img{height: 158px; width: auto; max-width:none; }
+            img{height: 158px; width: 100%; max-width:none; object-fit: cover; }
         }
     }}
-    &.info-list-B1{>li{width:33.333333%;
+    &.info-list-B1{margin:0 -1rem;>li{width:35%; padding:0 1rem 1rem 1rem;
+        .img-item{ height:140px; overflow: hidden;
+            img{display:inline-block; width:25%; height:140px; padding:1px; max-width:none;  object-fit: cover;}
+            .tags{
+                .title{top:50px;}
+                .type{top:80px;}
+            }
+            //>:nth-child(2){float: left; height:308px; width: 40%; position: relative; top:50%; .fix-cy;} 
+        }
+        &:nth-child(1){width: 30%; float: left;
+            .img-item{overflow: hidden; height:500px;
+                img{width: 50%; height:250px;}
+                .tags{
+                    .title{top:200px;}
+                    .type{top:230px;}
+                }
+            }
+        }
+        .desc{ background: linear-gradient(to bottom, @gy-l2 , @wh);}
+    }}
+    &.info-list-B2{>li{width:14%;
         .img-item{ height:230px; overflow: hidden;
-            img{display:inline-block; width:50%; height:115px; padding:1px; max-width:none; }
+            img{display:inline-block;  width:50%; height:115px;  padding:1px; max-width:none; }
             .tags{
                 .title{top:90px;}
                 .type{top:120px;}
             }
-            //>:nth-child(2){float: left; height:308px; width: 59%; position: relative; top:50%; .fix-cy;} 
+            //>:nth-child(2){float: left; height:308px; width: 40%; position: relative; top:50%; .fix-cy;} 
         }
+        &:nth-child(1){width: 30%; float: left;
+            .img-item{overflow: hidden; height:500px;
+                img{width: 50%; height:250px;}
+            }
+        }
+        .desc{ background: linear-gradient(to bottom, @gy-l2 , @wh);}
     }}
 }
 .chrome .info-list.info-list-A1 > li:nth-child(1) .img-item img{height:320px;}
@@ -310,7 +336,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
 .info-banner{width: 470px; height:320px; position: absolute; left:0; top:0;
     .carousel-inner{height:320px;
         .item{
-            img{height:320px; width: auto; min-width:100%; max-width: none; position: relative; left:50%; .fix-cx;}
+            img{height:320px; width: auto; min-width:100%; max-width: none; position: relative; left:50%; .fix-cx;  object-fit: cover;}
             .carousel-caption{left:0; right:0; bottom:0; padding:10px; background-color: fade(@bk,50%);h3,p{margin:0;}}
         }
     }
