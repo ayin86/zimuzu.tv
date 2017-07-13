@@ -11,23 +11,47 @@
 <style type="text/css">
 </style>
 <style type="text/less">
-.test{display:inline-block; white-space: nowrap; border: 5px solid #000;}
-.sub{display: inline-block; width:800px;;}
+	body,html{width:100%;height:100%;}
+	.test,.test2{margin:10px; background-color: blue; width: 120px;}
+	.test li,.test2 li{ background-color: red; margin:10px; padding:10px; width:100px;}
 </style>
 </head>
 <body>
-	<div class="test">
-		<div class="sub">11111</div>
-		<div class="sub">22222</div>
-		<div class="sub">33333</div>
-		<div class="sub">44444</div>
-		<div class="sub">55555</div>
-	</div>
+	<ul class="test">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	<ul class="test2">
+		<li>一</li>
+		<li>二</li>
+		<li>三</li>
+	</ul>
 </body>
 </html>
 <script src="../lib/init/loadFiles-after.js"></script>
 <script>
 $(function(){
-
+	$.fn.test = function(options,callback){
+        var settings={
+            splitNum:0,
+            onload:function(){alert(1)}
+        }
+        var opts=$.extend(settings,options);
+        $eo=this;
+        $($eo).children().each(function(i,obj){
+        //	alert($eo.html());
+        		$(obj).on("click",{he:$eo},function(e){
+        			alert(e.data.he.html());
+        		});
+        });
+        
+    }
+	$(".test").test({});
+	$(".test2").test({});
+	$.timer.set("test",function(e){
+		alert(1)
+		//alert(e.test);
+	},1000);
 });
 </script>
