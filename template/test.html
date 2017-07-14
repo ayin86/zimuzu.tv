@@ -12,7 +12,9 @@
 </style>
 <style type="text/less">
 	body,html{width:100%;height:100%;}
-	.test,.test2{margin:10px; background-color: blue; width: 120px;}
+	.test,.test2{margin:10px; background-color: blue; width: 120px;
+		&
+	}
 	.test li,.test2 li{ background-color: red; margin:10px; padding:10px; width:100px;}
 </style>
 </head>
@@ -32,26 +34,6 @@
 <script src="../lib/init/loadFiles-after.js"></script>
 <script>
 $(function(){
-	$.fn.test = function(options,callback){
-        var settings={
-            splitNum:0,
-            onload:function(){alert(1)}
-        }
-        var opts=$.extend(settings,options);
-        $eo=this;
-        $($eo).children().each(function(i,obj){
-        //	alert($eo.html());
-        		$(obj).on("click",{he:$eo},function(e){
-        			alert(e.data.he.html());
-        		});
-        });
-        
-    }
-	$(".test").test({});
-	$(".test2").test({});
-	$.timer.set("test",function(e){
-		alert(1)
-		//alert(e.test);
-	},1000);
+	
 });
 </script>
