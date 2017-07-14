@@ -542,17 +542,17 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     :nth-child(5){width: 30%; bottom:0; right:0;}
 }
 
-.topic-wrapper{ border: 1px solid @gy-l1; position: relative;
+.topic-wrapper{ border: 1px solid @gy-l1; position: relative; 
     .topic-tabs{position: absolute; left:-30px; top:-10px;
         li{background-color: @gy-l5; width: 20px; height:20px; cursor: pointer; .bdr(50%); margin:10px 0; text-align: center; color:@wh; line-height: 20px;
             &.active{background-color: @bl;}
         }
     }
     .scroll-wrapper{
-        height:420px;
+        height:420px; overflow: hidden;
     }
     .topic-content{
-        .topic{overflow: hidden; position: relative;
+        .topic{overflow: hidden; position: relative; height:420px;
             .img-item{line-height:0; overflow: hidden; cursor: pointer; position: relative;  padding:0; margin: 0 auto; text-align: center; .ani;
                 img{width: 100%; .ani; height:200px; position: relative; object-fit: cover;}
                 .hot{position: absolute;opacity: 1; top:5px; left:5px; padding:5px; background-color: @re-l5; font-size: 1rem; line-height: 1rem; z-index: 1; color:@wh; .ani;}
@@ -645,7 +645,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
 
 
 .panel-hot-comment{
-    .panel-body{
+    .panel-body{ height:420px; overflow: hidden;
         .scroll-wrapper{height:420px;}
     }
 }
@@ -678,9 +678,9 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
             &.active{background-color: @bl;}
         }
     }
-    .scroll-wrapper{height:420px;}
-    .hotfilm-content{ height:420px;  
-        .film{white-space: normal; 
+    .scroll-wrapper{height:420px; overflow: hidden;}
+    .hotfilm-content{
+        .film{white-space: normal; height:420px;
             .img-item{float: left; width: 40%; height:220px; position: relative;
                 img{width: 100%; height:100%; object-fit: cover;}
                 .score{position: absolute; height:30px; padding:0 10px; line-height: 30px; .bdr; bottom:5px; right:5px; background-color:fade(@gr-m,80%); color:@wh; text-align: center;}
@@ -760,60 +760,3 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         p{}
     }
 }
-
-/*<div class="foot-links">
-                <p class="title"></p>
-                <ul class="ft-links">
-                    <li>商业翻译洽谈</li>
-                    <li>联系我们</li>
-                    <li>加入字幕组</li>
-                    <li>意见反馈</li>
-                    <li>账号异常申诉</li>
-                    <li>其他字幕组入驻</li>
-                </ul>
-            </div>
-            
-            <div class="foot-contact">
-                <ul class="ft-contact">
-                    <li>
-                        <p class="title">人人影视官方微博</p>
-                        <p class="desc">@人人影视字幕组分享</p>
-                    </li>
-                    <li>
-                        <p class="title">字幕组官方微博</p>
-                        <p class="desc">@字幕组ZiMuZu</p>
-                    </li>
-                    <li>
-                        <p class="title">人人影视合作洽谈</p>
-                        <p class="desc">fanyi@yyets.com</p>
-                    </li>
-                    <li>
-                        <p class="title">加入字幕组</p>
-                        <p class="desc">点击查看详情</p>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="foot-qrcode">
-                <ul class="ft-qrcode">
-                    <li>
-                        <p class="title">人人影视官方微信号</p>
-                        <p class="desc">美剧炸了</p>
-                        <img src="../lib/style/images/qrcode/code01.png" alt="" />
-                    </li>
-                    <li>
-                        <p class="title">日剧组微信号</p>
-                        <p class="desc">追新番</p>
-                        <img src="../lib/style/images/qrcode/code01.png" alt="" />
-                    </li>
-                    <li>
-                        <p class="title">韩剧组微信号</p>
-                        <p class="desc">韩剧精灵</p>
-                        <img src="../lib/style/images/qrcode/code01.png" alt="" />
-                    </li>
-                    <li>
-                        <p class="title">小语种组微信号</p>
-                        <p class="desc">少数派观影报告</p>
-                        <img src="../lib/style/images/qrcode/code01.png" alt="" />
-                    </li>
-                </ul>*/

@@ -290,7 +290,7 @@
 				            </div>
 				          </div>
 				        </div>
-						<div class="panel-body scroll-wrapper">
+						<div class="panel-body scroll-wrapper today-tv-scroll">
 							<ul class="today-tv-list">
 								<li onclick="">
 									<a href="">
@@ -612,7 +612,7 @@
 						    </ul>
 						</div>
 						<div class="panel-body">
-							<div class="tab-content info-content ani-slide">
+							<div class="tab-content info-content ani-fade">
 								<div class="content-1 active">
 									<div id="info-banner" class="info-banner carousel carousel-fade" data-ride="carousel">
 							          <ol class="carousel-indicators">
@@ -1154,7 +1154,8 @@
 								<ul class="topic-tabs">
 									<li class="active">1</li><li>2</li><li>3</li><li>4</li><li>5</li>
 								</ul>
-								<div class="topic-content">
+								<div class="scroll-wrapper"><div class="scroll">
+								<div class="topic-content tab-content">
 									<div class="topic">
 										<div class="img-item">
 											<div class="tags">
@@ -1315,7 +1316,8 @@
 											</li>
 										</ul>
 									</div>
-								</div>
+								</div> 
+								</div></div><!--scroll element-->
 							</div>
 						</div>
 					</div>
@@ -1536,8 +1538,9 @@
 								<ul class="hotfilm-tabs">
 									<li class="active">1</li><li>2</li><li>3</li>
 								</ul>
-								<div class="hotfilm-content">
-									<div class="film">
+								<div class="scroll-wrapper"><div class="scroll">
+								<div class="hotfilm-content tab-content ani-slide">
+									<div class="film active">
 										<div class="img-item">
 											<div class="score">6.2</div>
 											<img src="../lib/style/images/movies/movie28.jpg" alt="" />
@@ -1582,6 +1585,7 @@
 										<p class="desc">亚马逊公主戴安娜·普林斯（盖尔·加朵 Gal Gadot 饰），经过在家乡天堂岛的训练，取得上帝赐予的武器与装备，化身神奇女侠，与空军上尉史蒂夫·特雷弗（克里斯·派恩 Chris Pine 饰）一同来到人类世界，捍卫和平、拯救世界，在一战期间上演了震撼人心的史诗传奇。</p>
 									</div>
 								</div>
+								</div></div><!--scroll element end-->
 							</div>
 						</div>
 					</div>
@@ -1954,7 +1958,7 @@ $(function(){
 	//slider 初始化
 	$('.carousel').carousel({interval: 4000})
 	//自定义滚动条初始化
-	$(".scroll-wrapper").mCustomScrollbar({
+	$(".today-tv-scroll").mCustomScrollbar({
 		callbacks:{
 	      onScrollStart: function(){$("body").css({overflow:"hidden"})},//滚动开始，屏蔽body滚动
 	      onScroll: function(){$.timer.set("scrollWrapper",function(){$("body").css({overflow:""})},1000);}//滚动完毕，一秒后重新启用body滚动
@@ -2000,7 +2004,11 @@ $(function(){
         var $sw=$con;
         if(opts.ani=="fade"){$con.addClass("ani-fade")}else 
         if(opts.ani=="slide"){
-        		$con.addClass("ani-slide").wrap("<div class='scroll-wrapper'><div class='scroll'/></div>");
+        		$con.addClass("ani-slide");
+        		if($con.parent().hasClass("scroll")==false){
+        			alert(1)
+        			$con.wrap("<div class='scroll-wrapper'><div class='scroll'/></div>");
+        		}
         		$sw=$con.parent().parent();
         		if(opts.direction!="H"){
         			$sw.addClass("scroll-vertical");
@@ -2157,7 +2165,6 @@ $.fn.slideContent = function(options,callback){
 $(window).load(function(){
 	
 	$.timer.set("load",function(){
-		
 		$(".info-content").slideTabs({
 			header:$(".info-header"),
 			width:1200,
@@ -2228,6 +2235,6 @@ $(".content-5 .info-list").addClass("info-list-A3").children("li:lt(2)").remove(
         		$()
         }
     }
-*/
+    */
 
 </script>
