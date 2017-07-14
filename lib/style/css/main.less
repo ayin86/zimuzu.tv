@@ -724,10 +724,96 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     }
 }
 
-.links{font-size: 0; margin:-20px;
-    li{width:16.6666666%; display:inline-block; padding:20px;
-        img{width: 100%;}
+.links{font-size: 0; display:table;
+    li{ width: 1%; display:table-cell; .ani; padding:40px 0 20px 0; font-size: 1.2rem; cursor: pointer; text-align: center;color:@gy-d5; white-space: nowrap;
+        a{color:@gy-d5;}
+        //&:before{.fa; content:"\f14e"; padding-right:5px; color:@gy-l3;}
+        &:hover{transform: scale(1.1); color:@bl-l5; a{color:@bl-l5;}}
     }
-    &.links-img{}
+    &.links-img{ display: block;  margin:-20px;
+        li{ display:inline-block; padding:20px; width:16.6666666%;img{width: 100%;}}
+    }
 }
 
+.ui-footer{ background-color: @bl-m8; padding:40px 0 0 0; 
+    .ui-limit{font-size: 0;
+        .foot-group{display:inline-block;vertical-align: top; font-size: 0; width: 300px; height:200px; 
+            li{line-height: 2rem; font-size: 1.2rem; width: 50%; display: inline-block; color:fade(@wh,80%);}
+        }
+        .foot-links{width: 150px; font-size: 0;
+            li{width: 100%; }
+        }
+        .foot-contact{ width: 400px;
+            li{text-align: center; margin-bottom: 40px;
+                .desc{color:fade(@wh,40%)}
+            }
+        }
+        .foot-qrcode{width: 650px;
+            li{width: 25%; text-align: center; line-height: 1.5rem;
+                img{width:70%;}
+                .title{line-height: 2rem;}
+                .desc{color:fade(@wh,40%);}
+            }
+        }
+    }
+    .copyright{text-align: center; font-size: 1.2rem; margin-top:20px; padding:20px 0 10px 0; color:@wh; background-color:fade( @bl-m9,50%);
+        p{}
+    }
+}
+
+/*<div class="foot-links">
+                <p class="title"></p>
+                <ul class="ft-links">
+                    <li>商业翻译洽谈</li>
+                    <li>联系我们</li>
+                    <li>加入字幕组</li>
+                    <li>意见反馈</li>
+                    <li>账号异常申诉</li>
+                    <li>其他字幕组入驻</li>
+                </ul>
+            </div>
+            
+            <div class="foot-contact">
+                <ul class="ft-contact">
+                    <li>
+                        <p class="title">人人影视官方微博</p>
+                        <p class="desc">@人人影视字幕组分享</p>
+                    </li>
+                    <li>
+                        <p class="title">字幕组官方微博</p>
+                        <p class="desc">@字幕组ZiMuZu</p>
+                    </li>
+                    <li>
+                        <p class="title">人人影视合作洽谈</p>
+                        <p class="desc">fanyi@yyets.com</p>
+                    </li>
+                    <li>
+                        <p class="title">加入字幕组</p>
+                        <p class="desc">点击查看详情</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="foot-qrcode">
+                <ul class="ft-qrcode">
+                    <li>
+                        <p class="title">人人影视官方微信号</p>
+                        <p class="desc">美剧炸了</p>
+                        <img src="../lib/style/images/qrcode/code01.png" alt="" />
+                    </li>
+                    <li>
+                        <p class="title">日剧组微信号</p>
+                        <p class="desc">追新番</p>
+                        <img src="../lib/style/images/qrcode/code01.png" alt="" />
+                    </li>
+                    <li>
+                        <p class="title">韩剧组微信号</p>
+                        <p class="desc">韩剧精灵</p>
+                        <img src="../lib/style/images/qrcode/code01.png" alt="" />
+                    </li>
+                    <li>
+                        <p class="title">小语种组微信号</p>
+                        <p class="desc">少数派观影报告</p>
+                        <img src="../lib/style/images/qrcode/code01.png" alt="" />
+                    </li>
+                </ul>*/
