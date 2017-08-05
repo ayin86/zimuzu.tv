@@ -49,7 +49,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         .logo-bg{position: absolute; height:70px; top:-5px; left:50%; z-index: -1; .fix-cx;}
     }
     .ui-nav{display:inline; white-space: nowrap; margin:0 1.5rem; .fixfloat; float:left;
-        >li{display:inline-block; line-height: 60px; float: left; padding:0 10px; font-size: 1rem; color:@wh;cursor: pointer; 
+        >li{display:inline-block; line-height: 60px; float: left; padding:0 10px; font-size: 1.1rem; color:@wh;cursor: pointer; 
             &:hover{background-color: fade(@wh,10%);}
             &.active{position: relative; overflow: hidden;
                 &:after{content:"1"; width:10px; height:10px; .bg-wh; font-size: 0; position: absolute; bottom:-7px;margin-left:-5px; left:50%;.fix-cx; transform:rotate(45deg);}
@@ -195,6 +195,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
                 }
             }
         }
+        &.row-content-top{margin:0 -15px;}
     }
     
     &.content-hotfilm{background-color: @gy-d8; padding:10px 0;
@@ -217,8 +218,8 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
   >li{display:inline-block; position: relative; margin-bottom:10px; width: 14.285714285%;padding:0 .6rem;
     .img-item{line-height:0;overflow: hidden;cursor: pointer; position: relative;  padding:0; margin: 0 auto; .ani;
       img{ width: 100%; max-width:100%; height: 160px;  .ani; position: relative; object-fit: cover;}
-      >.count,>.type{position: absolute; z-index: 1; border: 1px solid fade(@wh,30%); right:-17px; top:-5px; width: 50px; color:@wh;line-height: 1rem;padding: 8px 0 3px 0; background-color: fade(@bk,50%); text-align: center; transform:rotate(45deg);font-family: arial;font-size: 12px; .ani;}
-      >.type{ right:auto; top:auto; width: 70px; left:-24px;  bottom:-4px; padding:3px 0 14px 0;}
+      >.count,>.desc{position: absolute; z-index: 1; left:5px; top:5px; color:@wh;line-height: 1rem;padding:3px; background-color:fade(@gr-d,80%); text-align: center; font-size:1rem; .ani;}
+      >.desc{ left:auto; top:auto;  right:5px;  bottom:5px; }
       .tags{position: absolute; overflow: hidden; opacity: 0; color:fade(@wh,90%); line-height: 1rem; margin:0; top:0; right:0; bottom:0; left:0; width: 100%; z-index: 1;  background-color: fade(@bk,80%);   .ani;
             >.name,>.type{position: absolute; left:0; right:0; text-align: center;}
             >.name{font-size: 1rem; top:60px;}
@@ -241,12 +242,12 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     }
     >.name-chs,>.name-eng{font-size: 14px; line-height: 1.8rem; height: 3rem; padding-top:0px; font-weight: bold; text-align: center; color:@gy-d5;width: 100%;  margin: 0;.thidden; }
     >.name-eng{position: absolute;bottom:0;left:0;width:100%; height:1rem; color:@gy-m3; padding:0 .8rem; line-height: 1rem;font-weight: normal; }
-    &:nth-child(1),&:nth-child(2),&:nth-child(3){.count{background-color: fade(@re,80%); color:@wh;}}
+    
     &:hover{
         .img-item{//transform: scale(1.05);
             img{ transform: scale(1.2);}
             //&:after{content:" "; opacity: 1;}
-            >.count,>.type{opacity: 0;}
+            >.count,>.desc{opacity: 0;}
             .tags{opacity: 1;}
         }
     }
@@ -254,6 +255,24 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
   &.play-list-col4{li{width:25%;}}
   &.play-list-col3{li{width:33.33333333333%;>.name{}}}
   &.play-list-col2{li{width:50%;>.name{}}}
+  &.play-list-topdown{
+      >li{
+          .img-item{
+              >.count{min-width: 20px; background-color: fade(@bk,50%); opacity: 0;}
+              .tags{.name{background-color: fade(@bl,50%); left:50%; top:40px; right:auto; .fix-cx; padding:5px 10px; &:before{content:"Top."} }}
+          }
+          &:nth-child(1),&:nth-child(2),&:nth-child(3){.count{background-color: fade(@re,80%); opacity: 1; color:@wh;}}
+          &:hover{
+                .img-item{
+                    >.count,>.desc{opacity: 0;}
+                }
+            }
+      }
+      &.play-list-topdown-ix{
+          >li{ width: 11.111111111%;}
+      }
+  }
+  
   &.play-list-newfilm{
       >li{ width:17%;
         .img-item{
@@ -275,14 +294,8 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
                     .name{top:80px;}.type{top:100px;}
                     .corner{li{padding:0;}}
                }
-               .episode{position: absolute; bottom:5px; left:5px; padding:3px; .ani; font-size: 1rem; line-height: 1.3rem; z-index: 1; background-color:fade(@gr-d,80%);  color:@wh; }
                img{height:200px;}
            }
-           &:hover{
-                .img-item{//transform: scale(1.05);
-                    .episode{opacity: 0;}
-                }
-            }
        }
    }
 }
@@ -718,7 +731,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
                         &.name{color:@wh;}
                     }
                 }
-                >p{ color:@gy-l5;}
+                >p{ color:@gy-l5; &:before{color:@gy-d6;}}
             }
         }
     }
@@ -738,20 +751,26 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
 .ui-footer{ background-color: @bl-m8; padding:40px 0 0 0; 
     .ui-limit{font-size: 0;
         .foot-group{display:inline-block;vertical-align: top; font-size: 0; width: 300px; height:200px; 
-            li{line-height: 2rem; font-size: 1.2rem; width: 50%; display: inline-block; color:fade(@wh,80%);}
+            li{line-height: 2rem; font-size: 1.2rem; width: 50%; display: inline-block; color:fade(@wh,80%); a{ color:fade(@wh,80%);}
+            &:hover{color:@bl-l5; a{color:@bl-l5;}}
+            }
         }
         .foot-links{width: 150px; font-size: 0;
             li{width: 100%; }
         }
         .foot-contact{ width: 400px;
             li{text-align: center; margin-bottom: 40px;
-                .desc{color:fade(@wh,40%)}
+                .title{color:fade(@wh,80%);}
+                .desc{color:fade(@wh,40%); a{color:fade(@wh,40%);}}
+                &:hover{
+                    .desc{color:@bl-l5; a{color:@bl-l5;}}
+                }
             }
         }
         .foot-qrcode{width: 650px;
             li{width: 25%; text-align: center; line-height: 1.5rem;
                 img{width:70%;}
-                .title{line-height: 2rem;}
+                .title{line-height: 2rem;color:fade(@wh,80%);}
                 .desc{color:fade(@wh,40%);}
             }
         }
@@ -759,4 +778,112 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     .copyright{text-align: center; font-size: 1.2rem; margin-top:20px; padding:20px 0 10px 0; color:@wh; background-color:fade( @bl-m9,50%);
         p{}
     }
+    &.ui-footer-simple{padding:0;
+        .copyright{ background-color: @bl-m8;}
+    }
 }
+
+.filter-wrapper{background-color: @bl-m8; padding:15px;
+    .tips{background-color: @bl-m7; margin:-15px -15px 0 -15px; padding:10px;
+        li{text-align: center; font-size: 1.2rem; line-height: 3rem;  color:@bl-m2;
+            .mark{font-style: normal; .bg-tr; color:@wh;  }
+            &.login-tip{font-size: 1.2rem;}
+        }
+    }
+    .filter-btn{
+        .title{font-size: 1.4rem;  border-bottom:1px solid @bl-m7; line-height: 3rem; color:@bl-m4; margin: 0; }
+        .btn-wrapper{font-size: 0; margin:0 -10px; padding:5px 0;
+            li{display:inline-block; font-size: 1.2rem; width: 50%; line-height: 3rem; padding:5px 10px;
+                .btn{width: 100%; margin: 0; background-color: @bl-m7; color:@wh; .ani;
+                    &:hover{background-color: @bl-m6;}
+                }
+            }
+        }
+    }
+    
+    .filter{margin: 10px 0 20px 0;
+        .title{ font-size: 1.4rem; border-bottom:1px solid @bl-m7; line-height: 3rem; padding:0 8px; color:@bl-m4;}
+        .select-wrapper{ font-size: 0;
+            li{display:inline-block; font-size: 1rem; padding:5px 10px; color:@bl-m2; a{color:@bl-m2;} cursor: pointer; .ani;
+                &:hover{background-color:  @bl-m7;}
+                &.active{background-color: @bl-l5;color:@wh; a{color:@wh;}}
+            }
+        }
+    }
+    
+}
+
+.film-list{border-top: 2px solid @bl-m7;
+    .item{border-bottom: 1px dotted @gy-l5; padding:20px 0;.ani;
+        .img-item{float: left; position: relative; margin-right: 20px;
+            img{width: 120px; height: 160px; object-fit: cover;}
+            .score{position: absolute; height:20px; padding:0 5px; line-height: 20px; .bdr; bottom:5px; right:5px; background-color:fade(@gr-m,80%); color:@wh; text-align: center;}
+        }
+        .film-info{position: relative; .fixfloat;
+            .siterank{position: absolute; right:0; top:0; text-align: center; background-color: @gy-l1; .ani; padding: 10px; color:@gy-m5; line-height: 2rem; .bdr(5px);
+                .mark{display:block; font-style: normal; font-size: 1.6rem; line-height: 2rem; color:@gy-m9; .bg-tr; padding:0; }
+            }
+            p{.thidden; margin: 0; line-height: 2.3rem; margin-right: 90px;
+                >span{padding:5px;}
+                &.title{font-size: 1.4rem; color:@bk;}
+                &.sort{}
+                &.stat{
+                    .view{
+                        &:before{.fa; content:"\f06e"; margin-right: 5px;}
+                    }
+                    .fav{
+                        &:before{.fa; content:"\f005"; margin-right: 5px;}
+                    }
+                }
+                &.desc{}
+                &.dati{}
+            
+            }
+            
+        }
+        &:hover{background-color: @gy-l1; padding:20px;
+            .film-info{
+                .siterank{background-color: @gy-l2; }
+            }
+        }
+    }
+}
+.film-list-pagination{float: right;
+    li{
+        a{color:@bl-m7;}
+        &.active{a{background-color: @bl-m7;}}
+    }
+}
+/*
+<div class="film-list">
+    <div class="item">
+        <div class="img-item">
+            <a href="#"><img src="../lib/style/images/tvplay/tvplay16.jpg"/></a>
+            <div class="score">9.8</div>
+        </div>
+        <div class="film-info">
+            <div class="date">3天前 13:02</div>
+            <div class="siterank">本站排名<i class="mark">1</i></div>
+            <p class="title">
+                    <span class="chs">权利的游戏</span>
+                    <span class="eng">Game of Thrones</span>
+                    <span class="year">2011</span>
+                    <span class="season">第7季连载中</span>
+            </p>
+            <p class="sort">
+                    <span class="type">美剧</span>
+                    <span class="class">战争/剧情/魔幻/历史/古装/史诗</span>
+            </p>
+            <p class="stat">
+                    <span class="view">540367666次浏览</span>
+                    <span class="fav">81720次收藏</span>
+                    <span class="start">2011-04-17 首播</span>
+            </p>
+            <p class="desc">
+                    <span>原创翻译双语字幕</span>
+                    <span>更新S07E03</span>
+                    <span>版权原因本站仅提供字幕，http://www.zimuzu.tv/subtitle/53143</span>
+            </p>
+        </div>
+    </div>
+</div>*/
