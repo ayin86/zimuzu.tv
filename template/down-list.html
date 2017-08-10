@@ -1023,11 +1023,14 @@ $(function(){
 		var str = this.href;  
 		//str = str.match(/^aaa(\S*)fff/)[1];  
 		str = str.match(/#.*?$/).toString(); 
-		//str=str.replace(/#/, "")
-		//document.getElementById(str).scrollIntoView();
-		$('html, body').animate({
-		    scrollTop: $(str).offset().top-30
-		}, 1000);
+		if($(".row-content").hasClass("view-flat")){
+			if($("html").hasClass("mozilla")){
+				str=str.replace(/#/, "")
+				document.getElementById(str).scrollIntoView();
+			}else{
+				$('body').animate({scrollTop: $(str).offset().top-30}, 1000);
+			}
+		}
 	})
 	$(window).scroll(function(){
 		//alert($(window).scrollTop());

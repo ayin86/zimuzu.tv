@@ -80,30 +80,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         }
     }
 }
-/*
- <header class="ui-header">
-        <div class="ui-limit">
-            <div class="logo-wrapper">
-                <div class="logo"></div>
-                <div class="desc">资源分享站</div>
-            </div>
-            <div class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default"><i class="fa fa-file"></i>分享本站地址</button>
-          <button type="button" class="btn btn-danger"><i class="fa fa-file"></i>切换为平铺视图</button>
-        </div>
-        <div class="view-count"><i class="fa fa-eye"></i>0</div>
-        <div class="film-title">
-            <span class="type">美剧</span>
-            <span class="name-chs">权力的游戏</span>
-            <span class="name-eng">Game of Thrones</span>
-            <span class="desc">的全部资源下载</span>
-        </div>
-        <div class="share-info">
-            最新的权力游戏下载地址，请速下载！
-        </div>
-        </div>
-</header>
- * */
+
 
 .ui-content{width: 100%; &:nth-child(2){}
     .row-content{padding: 40px 0 0 0; font-size: 0;
@@ -132,6 +109,11 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         }
         &.view-tabs{
             .infobar{display:none;}
+            .tab-side{
+                li{
+                    &.active{background-color:@bl-m7; color:@wh; a{color:@wh;}}
+                }
+            }
         }
     }
 }
@@ -187,19 +169,19 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
 .infobar{padding: 10px; line-height: 2.5rem; font-size: 1.4rem; font-weight: bold; border-bottom: 2px solid @bl-l5;
     .badge{line-height: 1.5rem; display:inline;vertical-align:middle; .bdr(20px); margin: 0 0 0 5px; background-color: @bl-l5;}
 }
-.down-img{width: 128px; height:128px; display:inline-block;vertical-align: top; background-image: url(../images/source/grid.png);  background-position: 0 0; zoom:.2;
-    &.down-img-thunder{background-position: -516px 0; }
-    &.down-img-yyets{background-position: -387px 0; }
-    &.down-img-baidu{background-position: -129px -129px; }
-    &.down-img-tencent{background-position: 0 -129px; }
-    &.down-img-emule{background-position: -258px -129px;}
-    &.down-img-magent{background-position: -387px -129px;}
-    &.down-img-baidu{background-position: -129px -129px;}
-    &.down-img-fantasy{background-position: -387px -258px;}
-    &.down-img-CT{background-position: 0 -258px;}
-    &.down-img-MI{background-position: -516px -129px;}
+.down-img{width: 16px; height:16px; display:inline-block; background-image: url(../images/source/grid16.png);  background-position: 0 0;
+    &.down-img-thunder{background-position: -68px 0; }
+    &.down-img-yyets{background-position: -51px 0; }
+    &.down-img-baidu{background-position: -17px -17px; }
+    &.down-img-tencent{background-position: 0 -17px; }
+    &.down-img-emule{background-position: -34px -17px;}
+    &.down-img-magent{background-position: -51px -17px;}
+    &.down-img-baidu{background-position: -17px -17px;}
+    &.down-img-fantasy{background-position: -51px -34px;}
+    &.down-img-CT{background-position: 0 -34px;}
+    &.down-img-MI{background-position: -68px -17px;}
     &.down-img-default{background-position: 0 0;}
-    &.down-img-cloud{background-position: -129px 0;}
+    &.down-img-cloud{background-position: -17px 0;}
 }
 .down-list{
     >li{font-size: 1.2rem;padding:10px; border-bottom: 1px dotted @gy-l3; .ani;
