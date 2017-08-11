@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>down-list</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<script src='../lib/3rd/jquery-1.11.1.min.js'></script>
+<script src='../lib/3rd/chroma/chroma.js'></script>
+<script src='../lib/aYin/aYin.js'></script>
+<link rel='stylesheet' type='text/css' href='../lib/aYin/aYin.css'>
+<script src='../lib/3rd/bootstrap/js/bootstrap.js'></script>
+<link rel='stylesheet' type='text/css' href='../lib/3rd/bootstrap/css/bootstrap.css'>
+<link rel='stylesheet' type='text/css' href='../lib/style/css/main.css'>
+<link rel='stylesheet/less' type='text/css' href='../lib/style/css/down-list.less'/>
+<script src='../lib/3rd/less/less.js'></script>
+<style type="text/css">
+</style>
+<style type="text/less">
+
+</style>
+</head>
+<body class="view-flat view-film">
+	<!---------header------------>
+    <header class="ui-header">
+    		<div class="ui-limit">
+    			<div class="logo-wrapper">
+    				<div class="logo"></div>
+    				<div class="desc">资源分享站</div>
+    			</div>
+    			<div class="btn-group" role="group" aria-label="...">
+			  <button type="button" class="btn btn-default"><i class="fa fa-share"></i>分享本站地址</button>
+			  <button type="button" class="btn btn-danger btn-toggle-view"><i class="fa fa-th-list"></i>切换为平铺视图</button>
+			</div>
+			<div class="view-count">
+				<span class="desc"><i class="fa fa-eye"></i>访问量：</span>
+				<span class="count">23120</span>
+			</div>
+			<div class="count-down">
+				<p class="minfo">
+					本页将于<span class="count">0</span>天<span class="count">3</span>时<span class="count">45</span>分<span class="count">22</span>秒 后自动删除
+				</p>
+				<p class="sinfo">每点击一次本页面有效期增加1分钟,最长不超过24小时</p>
+			</div>
+			<p class="film-title">
+				<span class="type">电影</span>
+				<span class="name-chs">银河护卫队2</span>
+				<span class="name-eng">Guardians of the Galaxy Vol. 2</span>
+				<span class="desc">的全部资源下载</span>
+			</p>
+			<p class="share-info">
+				最新的银河护卫队2下载地址，留言信息，如没有请隐藏！<!--如果太长，会省略。没有人关心此信息。-->
+			</p>
+    		</div>
+	</header>
+	<div class="ui-content">
+		<div class="ui-limit">
+			<div class="row row-content">
+				<!---------资讯类------------>
+				<div class="col-box col-sidebar">
+					<div class="sidebar-warpper">
+						<ul class="tab-header tab-side"  role="tablist">
+						  <li  role="presentation" class="active">
+						  	<a href="#sidetab-01" aria-controls="sidetab-01" role="tab" data-toggle="tab">正片</a>
+						  	<ul class="tab-header tab-info"  role="tablist">
+							  <li  role="presentation"><a href="#tab-g1-01" aria-controls="tab-g1-01" role="tab" data-toggle="tab"><i class="fa fa-play-circle-o"></i>在线看</a></li>
+							  <li role="presentation" class="active"><a href="#tab-g1-02" aria-controls="tab-g1-02" role="tab" data-toggle="tab">MP4<span class="badge">中字</span></a></li>
+							  <li role="presentation"><a href="#tab-g1-03" aria-controls="tab-g1-03" role="tab" data-toggle="tab">RMVB<span class="badge">中字</span></a></li>
+							  <li role="presentation"><a href="#tab-g1-04" aria-controls="tab-g1-04" role="tab" data-toggle="tab">BD-1080P</a></li>
+							  <li role="presentation"><a href="#tab-g1-05" aria-controls="tab-g1-05" role="tab" data-toggle="tab">BD-720P</a></li>
+							  <li role="presentation"><a href="#tab-g1-06" aria-controls="tab-g1-06" role="tab" data-toggle="tab">WEB-DL</a></li>
+						    </ul>
+						  </li>
+						  <li role="presentation">
+						  	<a href="#sidetab-02" aria-controls="sidetab-02" role="tab" data-toggle="tab">预告片</a>
+						  	<ul class="tab-header tab-info"  role="tablist">
+							  <li role="presentation" class="active"><a href="#tab-g2-01" aria-controls="tab-g2-01" role="tab" data-toggle="tab">HR-HDTV<span class="badge">中字</span></a></li>
+						    </ul>
+						  </li>
+						  <li role="presentation">
+						  	<a href="#sidetab-03" aria-controls="sidetab-03" role="tab" data-toggle="tab">周边资源</a>
+						  	<ul class="tab-header tab-info"  role="tablist">
+							  <li role="presentation" class="active"><a href="#tab-g3-01" aria-controls="tab-g3-01" role="tab" data-toggle="tab">电影原声</span></a></li>
+							  <li role="presentation" class="active"><a href="#tab-g3-02" aria-controls="tab-g3-02" role="tab" data-toggle="tab">演员访谈</span></a></li>
+						    </ul>
+						  </li>
+						  
+					    </ul>
+					</div>
+				</div>
+				<div class="col-box col-infomation">
+					<div class="tab-content info-content">
+						<div role="tabpanel" class="tab-pane active" id="sidetab-01">
+							<ul class="tab-header tab-info"  role="tablist">
+							  <li  role="presentation"><a href="#tab-g1-01" aria-controls="tab-g1-01" role="tab" data-toggle="tab"><i class="fa fa-play-circle-o"></i>在线看</a></li>
+							  <li role="presentation" class="active"><a href="#tab-g1-02" aria-controls="tab-g1-02" role="tab" data-toggle="tab">MP4<span class="badge">中字</span></a></li>
+							  <li role="presentation"><a href="#tab-g1-03" aria-controls="tab-g1-03" role="tab" data-toggle="tab">RMVB<span class="badge">中字</span></a></li>
+							  <li role="presentation"><a href="#tab-g1-04" aria-controls="tab-g1-04" role="tab" data-toggle="tab">BD-1080P</a></li>
+							  <li role="presentation"><a href="#tab-g1-05" aria-controls="tab-g1-05" role="tab" data-toggle="tab">BD-720P</a></li>
+							  <li role="presentation"><a href="#tab-g1-06" aria-controls="tab-g1-06" role="tab" data-toggle="tab">WEB-DL</a></li>
+						    </ul>
+						    <div class="tab-content info-content">
+						    		<div role="tabpanel" class="tab-pane" id="tab-g1-01">
+									<div class="infobar">正片 专链+在线观看 （推荐）</div>
+									<ul class="down-list">
+										<li>
+											<div class="title">
+												<ul class="down-links">
+													<li>
+														<button class="btn">
+															<div class="down-img down-img-yyets"></div>
+															<p class="desc">人人下载器</p>
+														</button>
+													</li>
+													<li>
+														<button class="btn">
+															<div class="down-img down-img-baidu"></div>
+															<p class="desc">百度云</p>
+														</button>
+													</li>
+													<li>
+														<button class="btn">
+															<div class="down-img down-img-fantasy"></div>
+															<p class="desc">范特西视频</p>
+														</button>
+														<div class="copy-link" title="复制链接"></div>
+													</li>
+												</ul>
+												<span class="date">1天前</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+						    		<div role="tabpanel" class="tab-pane active" id="tab-g1-02">
+						    			<div class="infobar">正片 MP4 <span class="badge">中字</span></div>
+									<ul class="down-list">
+										<li>
+											<div class="title">
+												<span class="filename">Guardians.of.the.Galaxy.Vol.2.2017.银河护卫队2.720p.Chi_Eng.WEB-MP4-人人影视.mp4</span>
+												<span class="filesize">1.9GB</span>
+												<span class="date">1天前</span>
+											</div>
+											<ul class="down-links">
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-thunder"></div>
+														<p class="desc">迅雷</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-emule"></div>
+														<p class="desc">电驴</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-magent"></div>
+														<p class="desc">磁力</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-baidu"></div>
+														<p class="desc">百度云</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-default"></div>
+														<p class="desc">普通</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-cloud"></div>
+														<p class="desc">云盘</p>
+													</button>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+						    		<div role="tabpanel" class="tab-pane" id="tab-g1-03">
+									<div class="infobar">正片 RMVB <span class="badge">中字</span></div>
+									<ul class="down-list">
+										<li>
+											<div class="title">
+												<span class="filename">银河护卫队2中英双语字幕+双音轨Guardians Of The Galaxy Vol. 2.1080P.BDrip.x264.2audio</span>
+												<span class="filesize">3.05GB</span>
+												<span class="date">1天前</span>
+											</div>
+											<ul class="down-links">
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-thunder"></div>
+														<p class="desc">迅雷</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-emule"></div>
+														<p class="desc">电驴</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-magent"></div>
+														<p class="desc">磁力</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-baidu"></div>
+														<p class="desc">百度云</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-default"></div>
+														<p class="desc">普通</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-cloud"></div>
+														<p class="desc">云盘</p>
+													</button>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+						    		<div role="tabpanel" class="tab-pane" id="tab-g1-04">
+									<div class="infobar">正片 BD-1080P</div>
+									<ul class="down-list">
+										<li>
+											<div class="title">
+												<span class="filename">Guardians.of.the.Galaxy.Vol.2.2017.1080p.BluRay.x264-SPARKS</span>
+												<span class="filesize">9.7GB</span>
+												<span class="date">1天前</span>
+											</div>
+											<ul class="down-links">
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-thunder"></div>
+														<p class="desc">迅雷</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-emule"></div>
+														<p class="desc">电驴</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-magent"></div>
+														<p class="desc">磁力</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-baidu"></div>
+														<p class="desc">百度云</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-default"></div>
+														<p class="desc">普通</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-cloud"></div>
+														<p class="desc">云盘</p>
+													</button>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+						    		<div role="tabpanel" class="tab-pane" id="tab-g1-05">
+									<div class="infobar">正片 720P</div>
+									<ul class="down-list">
+										<li>
+											<div class="title">
+												<span class="filename">Guardians.of.the.Galaxy.Vol.2.2017.720p.BluRay.x264-SPARKS</span>
+												<span class="filesize">4.5GB</span>
+												<span class="date">1天前</span>
+											</div>
+											<ul class="down-links">
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-thunder"></div>
+														<p class="desc">迅雷</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-emule"></div>
+														<p class="desc">电驴</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-magent"></div>
+														<p class="desc">磁力</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-baidu"></div>
+														<p class="desc">百度云</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-default"></div>
+														<p class="desc">普通</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-cloud"></div>
+														<p class="desc">云盘</p>
+													</button>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+						    		<div role="tabpanel" class="tab-pane" id="tab-g1-06">
+									<div class="infobar">正片 WEB-DL</div>
+									<ul class="down-list">
+										<li>
+											<div class="title">
+												<span class="filename">Guardians.of.the.Galaxy.Vol.2.2017.1080p.WEB-DL.DD5.1.H264-FGT.mkv</span>
+												<span class="filesize">3.2GB</span>
+												<span class="date">1天前</span>
+											</div>
+											<ul class="down-links">
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-thunder"></div>
+														<p class="desc">迅雷</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-emule"></div>
+														<p class="desc">电驴</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-magent"></div>
+														<p class="desc">磁力</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-baidu"></div>
+														<p class="desc">百度云</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-default"></div>
+														<p class="desc">普通</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-cloud"></div>
+														<p class="desc">云盘</p>
+													</button>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+						    </div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="sidetab-02">
+							<div class="tab-content info-content">
+								<div role="tabpanel" class="tab-pane" id="tab-g2-01">
+									<div class="infobar">预告片 HR-HDTV <span class="badge">中字</span></div>
+									<ul class="down-list">
+										<li>
+											<div class="title">
+												<span class="filename">预告片.Guardians.of.the.Galaxy.Vol.2.2017.银河护卫队2.720p.Chi_Eng.WEB-MP4-人人影视.mp4</span>
+												<span class="filesize">300MB</span>
+												<span class="date">1天前</span>
+											</div>
+											<ul class="down-links">
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-thunder"></div>
+														<p class="desc">迅雷</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-emule"></div>
+														<p class="desc">电驴</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-magent"></div>
+														<p class="desc">磁力</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-baidu"></div>
+														<p class="desc">百度云</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-default"></div>
+														<p class="desc">普通</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-cloud"></div>
+														<p class="desc">云盘</p>
+													</button>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="sidetab-03">
+							<div class="tab-content info-content">
+								<div role="tabpanel" class="tab-pane" id="tab-g3-01">
+									<div class="infobar">其他 演员访谈</div>
+									<ul class="down-list">
+										<li>
+											<div class="title">
+												<span class="filename">Guardians.of.the.Galaxy.Vol.2.银河护卫队2.演员访谈.MP4</span>
+												<span class="filesize">121MB</span>
+												<span class="date">1天前</span>
+											</div>
+											<ul class="down-links">
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-thunder"></div>
+														<p class="desc">迅雷</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-emule"></div>
+														<p class="desc">电驴</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-magent"></div>
+														<p class="desc">磁力</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-baidu"></div>
+														<p class="desc">百度云</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-default"></div>
+														<p class="desc">普通</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-cloud"></div>
+														<p class="desc">云盘</p>
+													</button>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="tab-g3-01">
+									<div class="infobar">其他 电影原声</div>
+									<ul class="down-list">
+										<li>
+											<div class="title">
+												<span class="filename">Guardians.of.the.Galaxy.Vol.2.2017.银河护卫队2.电影原声.RAR</span>
+												<span class="filesize">335MB</span>
+												<span class="date">1天前</span>
+											</div>
+											<ul class="down-links">
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-thunder"></div>
+														<p class="desc">迅雷</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-emule"></div>
+														<p class="desc">电驴</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-magent"></div>
+														<p class="desc">磁力</p>
+													</button>
+													<div class="copy-link" title="复制链接"></div>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-baidu"></div>
+														<p class="desc">百度云</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-default"></div>
+														<p class="desc">普通</p>
+													</button>
+												</li>
+												<li>
+													<button class="btn">
+														<div class="down-img down-img-cloud"></div>
+														<p class="desc">云盘</p>
+													</button>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	<div class="ui-footer ui-footer-simple">
+		<div class="copyright">
+			<p>YYeTs人人影视 2006-2017 © All Rights Reserved.</p>
+			<p>神盾信息有限公司 (香港) Shield Technologies Limited 联系邮箱：shield.hk@gmail.com</p>
+		</div>
+	</div>
+	
+	<div class="hidden">
+		
+	</div>
+	
+</body>
+</html>
+<script>
+$(function(){
+	//绑定A标签跳转链接
+	//document.getElementById("divId").scrollIntoView();
+	$(".tab-side").find("a").on("click",function(){
+		var str = this.href;  
+		//str = str.match(/^aaa(\S*)fff/)[1];  
+		str = str.match(/#.*?$/).toString(); 
+		if($("body").hasClass("view-flat")){
+			if($("html").hasClass("mozilla")){
+				str=str.replace(/#/, "")
+				document.getElementById(str).scrollIntoView();
+			}else{
+				$('body').animate({scrollTop: $(str).offset().top-30}, 1000);
+			}
+		}
+	})
+	$(window).scroll(function(){
+		//alert($(window).scrollTop());
+		if($(window).scrollTop()>360){
+			$(".tab-side").addClass("tab-side-fixed");
+		}else{
+			$(".tab-side").removeClass("tab-side-fixed");
+		}
+	})
+	
+	$(".btn-toggle-view").click(function(){
+		var fa=$(this).find(".fa");
+		if(fa.hasClass("fa-th-list")){
+			$(this).html("<i class='fa fa-th'></i>切换为标签视图");
+			$("body").removeClass("view-tabs").addClass("view-flat");
+		}else{
+			$(this).html("<i class='fa fa-th-list'></i>切换为平铺视图");
+			$("body").removeClass("view-flat").addClass("view-tabs");
+		}
+	})
+	
+})
+
+
+$(window).load(function(){
+	
+});
+
+</script>

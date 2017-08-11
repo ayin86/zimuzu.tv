@@ -81,6 +81,48 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     }
 }
 
+body{
+    &.view-flat{
+        .infobar{display:block;}
+        .tab-info{display:none;}
+        .tab-side{
+            >li{
+                &.active{.tab-info{display:block!important;} }
+                //&:hover{.tab-info{display:block!important;} }
+            }
+        }
+        .tab-content{
+            >.tab-pane{display:block;}
+        }
+        .down-list{
+            >li{
+                .down-links{transition:none!important;}
+            }
+         }
+    }
+    &.view-film{
+        .ui-header{
+            .btn-group{
+                .btn-toggle-view{display:none;}
+                .btn-default{.bdr!important;}
+            }
+        }
+        .down-list{
+            .down-links{
+                height:50px;
+            }
+        }
+        
+    }
+    &.view-tabs{
+        .infobar{display:none;}
+        .tab-side{
+            >li{
+                &.active{ >a{background-color:@bl-m7;color:@wh;}}
+            }
+        }
+    }
+}
 
 .ui-content{width: 100%; &:nth-child(2){}
     .row-content{padding: 40px 0 0 0; font-size: 0;
@@ -88,33 +130,26 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
             &.col-sidebar{width: 15%; min-height: 300px;
                 .sidebar-warpper{width: 100%;
                     .tab-side{ background-color: @bl-m8; width: 154px; padding:15px;
-                        li{line-height: 3rem; font-size: 1.4rem; text-align: center;}
+                        >li{line-height: 3rem; font-size: 1.4rem; text-align: center;
+                            >a{display:block;width: 100%;  color:@bl-m4;
+                                &:hover{background-color: fade(@bl-m7,30%);}
+                            }
+                            .tab-info{display:none; margin-bottom: 10px;
+                                >li{ font-size: 1rem; line-height: 2rem; white-space: nowrap;
+                                    >a{display:block;width: 100%; color:@bl-m5; &:hover{background-color: fade(@bl-m7,30%); }
+                                        .fa{margin-right: 5px;}
+                                        .badge{font-size: .8rem; margin-left: 5px; background-color: @bl-m7; color:@bl-m4; font-weight: normal;}
+                                    }
+                                }
+                            }
+                        }
                         &.tab-side-fixed{position: fixed; top:40px;}
                     }
                 }
             }
             &.col-infomation{width: 85%;}
         }
-        &.view-flat{
-            .infobar{display:block;}
-            .tab-info{display:none;}
-            .tab-content{
-                >.tab-pane{display:block;}
-            }
-            .down-list{
-                >li{
-                    .down-links{transition:none!important;}
-                }
-             }
-        }
-        &.view-tabs{
-            .infobar{display:none;}
-            .tab-side{
-                li{
-                    &.active{background-color:@bl-m7; color:@wh; a{color:@wh;}}
-                }
-            }
-        }
+        
     }
 }
 
@@ -150,7 +185,7 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     }
     >.active{display:inline-block;}
     
-    .tab-pane{min-height: 200px;
+    .tab-pane{min-height: 120px;
         >.tab-header{border-bottom: 1px solid @gy-l2; width: 100%; text-align: left; font-size: 0;  overflow: hidden; height: 34px;
             >li,>div{display:inline-block; margin:0 .3rem -2px .3rem;  cursor: pointer;  font-size: 1.4rem;
                 a{ text-decoration: none; color:@gy-d5; display:inline-block; padding:0 .5rem .8rem .5rem;
@@ -187,12 +222,12 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     >li{font-size: 1.2rem;padding:10px; border-bottom: 1px dotted @gy-l3; .ani;
         .title{margin:0; padding:0; font-size: 0; .fixfloat;
             >span{display:inline-block; font-size: 1.2rem; line-height: 38px;
-                &.episode{color: @bl-l5; float: left;}
-                &.filename{color:@gy-m5; padding: 0 10px;}
+                &.episode{color: @bl-l5; float: left; padding-right: 10px;}
+                &.filename{color:@gy-m5; padding-right: 10px;}
                 &.filesize{color:@gy-l5;}
                 &.date{float: right;color:@gy-l5;}
             }
-            .down-links{ height: 38px!important; padding:0 1rem!important; float: left;
+            .down-links{ height: 38px!important; padding:0!important; float: left;
                 >li{margin:0 .5rem 0 0;}
             }
         }
