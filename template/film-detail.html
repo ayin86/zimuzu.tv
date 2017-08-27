@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>film-list</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<script src="../lib/init/loadFiles.js"></script>
+<style type="text/css">
+</style>
+<style type="text/less">
+
+</style>
+</head>
+<body>
+	<!---------header------------>
+    <header class="ui-header">
+    		<div class="ui-logo">
+            <img src="../lib/style/images/logo.png" class="logo" alt="zimuzu.tv" />
+            <img src="../lib/style/images/logo-bg.png" class="logo-bg" />
+        </div>
+        <ul class="ui-nav ui-mnav">
+            <li class="active">首页</li>
+            <li>资讯</li>
+            <li>字幕</li>
+            <li>影视库</li>
+            <li>今日更新</li>
+            <li>排行榜</li>
+            <li class="ui-dropdown dropdown-message" >
+                <i class="fa fa-caret-down"></i>
+                <ul class="ui-dropdown-box">
+                    <li>更多菜单<span class="badge">1</span></li>
+                    <li>更多菜单<span class="badge">4</span></li>
+                    <li class="divider"></li>
+                    <li>更多菜单</li>
+                </ul>
+            </li>
+        </ul>
+                 
+        <ul class="ui-nav ui-snav">
+            <li class="ui-dropdown dropdown-app" >
+                <i class="fa fa-fixed fa-mobile-phone"></i>APP下载
+                <ul class="ui-dropdown-box">
+                    <li class="ialess">
+                    		<ul class="inline-wrapper">
+                    			<li>
+                    				<img src="../lib/style/images/qrcode/code-APP.png" alt="" class="qr-code"/>
+	                    			<p>扫码下载手机APP</p>
+                    			</li>
+                    			<li>
+                    				<img src="../lib/style/images/qrcode/code-H5.png" alt=""  class="qr-code"/>
+	                    			<p>扫码访问手机H5版</p>
+                    			</li>
+	                    		
+                    		</ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="ui-dropdown dropdown-message" >
+                <i class="fa fa-star"></i>
+                <ul class="ui-dropdown-box">
+                    <li>全部<span class="badge">38</span></li>
+                    <li>电影<span class="badge">2</span></li>
+                    <li>美剧<span class="badge">32</span></li>
+                    <li>日剧<span class="badge">1</span></li>
+                    <li>韩剧<span class="badge">3</span></li>
+                    <li>其他<span class="badge">8</span></li>
+                    <li>资讯<span class="badge">4</span></li>
+                </ul>
+            </li>
+            <li class="ui-dropdown dropdown-message" >
+                <i class="fa fa-envelope"></i>
+                <ul class="ui-dropdown-box">
+                    <li>私信<span class="badge">1</span></li>
+                    <li>系统通知<span class="badge">4</span></li>
+                </ul>
+            </li>
+            <li class="ui-dropdown dropdown-user">
+            		<img class="img-head" src="../lib/style/images/head/header.jpg" alt="" />
+                <span class="desc">aYin86</span>
+                <ul class="ui-dropdown-box">
+                    <li class="user-info-wrapper">
+                    		<img class="img-head" src="../lib/style/images/head/header.jpg" alt="" />
+                			<div class="user-info">
+                				<p class="user-name">aYin86<span class="badge">至尊会员</span></p>
+                				<p class="user-type"><i class="fa fa-sun-o"></i> 剧集后期组</p>
+                			</div>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                    		<ul class="tags">
+	                        <li><p>0</p><p>动态</p></li>
+	                        <li><p>68</p><p>评论</p></li>
+	                        <li><p>35</p><p>积分</p></li>
+	                        <li><p>231</p><p>登录天数</p></li>
+	                    </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="title">我要发布：</li>
+                    <li>
+                    		<ul class="tags">
+                    			<li>新闻资讯</li>
+		                    <li>收视快报</li>
+		                    <li>新剧评测</li>
+		                    <li>片单推荐</li>
+                    		</ul>
+                    		<ul class="tags">
+                    			<li>剧评</li>
+                    			<li>影评</li>
+		                    <li>字幕</li>
+		                    <li>公开课</li>
+		                    <li>电影</li>
+		                    <li>剧集</li>
+		                    <li>求档</li>
+                    		</ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+	                    	<ul class="tags">
+	                        <li><i class="fa fa-gear"></i> 个人设置</li>
+	                        <li><i class="fa fa-star"></i> 收藏</li>
+	                        <li><i class="fa fa-sign-out"></i> 退出登录</li>
+	                    </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="ui-dropdown dropdown-links" >
+                <i class="fa fa-navicon" title="更多功能"></i>
+                <ul class="ui-dropdown-box">
+	                <li>互助求档</li>
+                    <li>播出表</li>
+                    <li class="divider"></li>
+                    <li>官方微博</li>
+                    <li>官方微信</li>
+                    <li>人人词典</li>
+                    <li>字幕工具</li>
+                    <li>加入字幕组</li>
+                    <li>内部</li>
+                    <li class="divider"></li>
+                    <li>美女视频</li>
+                </ul>
+            </li>
+        </ul>
+	</header>
+	<!---------content------------>
+	<div class="ui-content">
+		<div class="ui-limit">
+			<!---------search------------>
+			<div class="ui-search">
+				<input type="text" class="search-input" placeholder="请您要搜寻的内容，如 电影 美剧 字幕 资讯" />
+				<button class="search-button"><i class="fa fa-search"></i></button>
+			</div>
+			<div class="row row-content row-content-top">
+				<div class="col-xs-12">
+					<div class="panel panel-film-detial">
+						<div class="panel-heading">
+							<h3>权力的游戏 Game of Thrones</h3>
+							<p class="desc">原创翻译双语字幕 更新S07E06 版权原因本站仅提供字幕，<a href="http://www.zimuzu.tv/subtitle/53259">点击这里下载</a> 冰火YYeTs书群：239139593</p>
+							<div class="siterank"><i class="mark">1</i>本站排名</div>
+							<div class="tip">
+								<p class="update">6天后播出第07集</p>
+								<p class="date">2017-08-28 周一</p>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-9">
+									<div class="film-detial-wrapper">
+										<div class="film-cover">
+											<div class="renew">
+												<i class="fa fa-bookmark"></i>
+												<span class="desc">已获续订</span>
+											</div>
+											<img src="../lib/style/images/tvplay/tvplay16.jpg"  alt="" />
+											<div class="favorite" onclick="addfav()">
+												<i class="fa fa-star-o"></i> 
+												<span class="desc">添加到收藏夹</span>
+											</div>
+										</div>
+										<ul class="film-detail">
+											<li><span class="label">地区</span><span class="desc">美国</span></li>
+											<li><span class="label">语言</span><span class="desc">英语</span></li>
+											<li><span class="label">电视台</span><span class="desc">HBO</span></li>
+											<li><span class="label">翻译</span><span class="desc">人人影视字幕组</span></li>
+											<li><span class="label">类型</span><span class="desc">战争/剧情/魔幻/历史/古装/史诗</span></li>
+											<li><span class="label">首播</span><span class="desc">2011-04-17 周日</span></li>
+											<li><span class="label">别名</span><span class="desc">冰与火之歌：权力的游戏 / 王座游戏 / A Song of Ice and Fire: Game of Thrones</span></li>
+											<li><span class="label">导演</span><span class="desc">阿兰·泰勒</span></li>
+											<li><span class="label">編劇</span><span class="desc">乔治•R•R•马丁 / 戴维·贝尼奥夫 / 丹尼尔•威斯</span></li>
+											<li><span class="label">主演</span><span class="desc"><a href="#">杰森·莫摩亚</a> / 伊恩·格雷 / 马克·艾迪 / 艾米莉亚·克拉克 / 莲娜·赫迪 / 斯蒂芬·迪兰 / 杰克·格里森 / 麦茜·威廉姆斯 / 艾尔菲·艾伦 / 露丝·莱斯利 / 查里斯·丹斯 / 米歇尔·费尔利 / 苏菲·特纳 / 彼特·丁拉基 / 约翰·C·布拉德利 / 汉娜·穆雷 / 肖恩·宾 / 伊萨克·亨普斯特德· / 基特·哈灵顿 / 尼可拉·科斯特-瓦尔 / 理查德·麦登 / 格辛·安东尼</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-xs-3 col-right">
+									<div class="grade">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half-empty"></i>
+										<span class="score">9<span class="point">.8</span></span>
+									</div>
+									<ul class="grade-detail">
+										<li class="row">
+											<div class="col-xs-2 desc">五星</div>
+											<div class="col-xs-10 chart">
+												<div class="chart-bar">
+													<div class="bar" style="width:98%"></div>
+													<div class="numbers">
+														<span class="percent">98%</span>
+														<span class="vote">37813票</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-xs-2 desc">四星</div>
+											<div class="col-xs-10 chart">
+												<div class="chart-bar">
+													<div class="bar" style="width:3%"></div>
+													<div class="numbers">
+														<span class="percent">3%</span>
+														<span class="vote">1391票</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-xs-2 desc">三星</div>
+											<div class="col-xs-10 chart">
+												<div class="chart-bar">
+													<div class="bar" style="width:0%"></div>
+													<div class="numbers">
+														<span class="percent">0%</span>
+														<span class="vote">462票</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-xs-2 desc">二星</div>
+											<div class="col-xs-10 chart">
+												<div class="chart-bar">
+													<div class="bar" style="width:0%"></div>
+													<div class="numbers">
+														<span class="percent">0%</span>
+														<span class="vote">146票</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-xs-2 desc">一星</div>
+											<div class="col-xs-10 chart">
+												<div class="chart-bar">
+													<div class="bar" style="width:0%"></div>
+													<div class="numbers">
+														<span class="percent">0%</span>
+														<span class="vote">377票</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										
+									</ul>
+									<ul class="state">
+										<li class="view">
+											<span class="label">浏览次数</span>
+											<span class="count">5.4亿</span>
+										</li>
+										<li class="fav">
+											<span class="label">收藏次数</span>
+											<span class="count">9.0万</span>
+										</li>
+									</ul>
+									<div class="tograde">
+										<div class="stars">
+											<i class="fa fa-star-o"></i>
+											<i class="fa fa-star-o"></i>
+											<i class="fa fa-star-o"></i>
+											<i class="fa fa-star-o"></i>
+											<i class="fa fa-star-o"></i>
+										</div>
+										<p class="desc">请您打分 已有<span class="count">40244</span>人打分</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-9">
+					<div class="panel-inner film-brief">
+						<div class="panel-inner-heading">
+							<span class="desc">剧情简介 </span>
+							<span class="right">
+								<a class="ctrl brief-showall" onclick="brief_showall()">展开全文 <i class="fa fa-chevron-circle-down"></i></a>
+							</span>
+						</div>
+						<div class="panel-inner-body">
+							<div class="brief-wrapper">
+								<div class="brief">
+									<p class="t-re-l5">版权方要求，本站仅提供字幕，请站内搜索下载</p>
+									<p>HBO电视台的《权力的游戏》第五季开播，为今年非常火爆的魔幻史诗电视剧，权力的游戏第6季会延续以往的精彩画面和剧情《权力的游戏》根据乔治·R·R·马丁的系列畅销小说《冰与火之歌》改编，由《特洛伊》的制片人大卫·贝尼奥夫和游戏《光晕》的编剧D·B·魏斯担任制片，2011年4月在HBO电视台首播。小说《冰与火之歌》作为三部曲诞生，后来扩充为六部书，而后原计划中《群鸦的盛宴》篇幅太长，被拆成了两本，目前出版到第五部《魔龙的狂舞》。正如托尔金所说，故事随讲述而成长。</p>
+									<p>故事发生在一个与我们自己的世界既相似又不似的世界——那里季节持续多年，有时甚至是几十年之久。故事的主线便发生在西方的形似不列颠岛的维斯特洛大陆上。由国王劳勃·拜拉席恩前往北地拜访他的好友——临冬城主暨北境守护艾德·史塔克开始，渐渐展示了这片国度的全貌。单纯的国王，耿直的首相，各怀鬼胎的大臣，拥兵自重的四方诸侯，全国仅靠着一根细弦维系着表面的和平，而当弦断之时，国家再度陷入无尽的战乱之中。而更让人惊悚的：那些远古的传说和早已灭绝的生物，正重新回到这片土地。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-inner">
+						<div class="panel-inner-heading">
+							<span class="desc">封面剧照 </span>
+							<span class="right" >一共有21张图片 
+								<a onclick="pic_showall()" class="ctrl pic-showall">展开全部 <i class="fa fa-chevron-circle-down"></i></a>
+								<a href="#" class="ctrl">添加图片 <i class="fa fa-plus-circle"></i></a>
+							</span>
+						</div>
+						<div class="panel-inner-body">
+							<ul class="related-pic">
+								<li><img src="../lib/style/images/related/01.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/02.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/03.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/04.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/05.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/06.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/07.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/08.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/10.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/11.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/12.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/09.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/13.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/14.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/15.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/16.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/17.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/18.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/19.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/20.jpg" alt="" /></li>
+								<li><img src="../lib/style/images/related/21.jpg" alt="" /></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="panel-inner">
+						<div class="panel-inner-body">
+							<!--<ul class="down-way-wrapper hidden" >
+								<li>
+									<div class="item">
+										<p class="desc">在线观看</p>
+										<ul class="source">
+											<li>
+												<div class="item-inner">
+													<div class="down-img-32 down-img-tencent"></div>
+													<p class="desc">腾讯视频</p>
+												</div>
+											</li>
+											<li>
+												<div class="item-inner">
+													<div class="down-img-32 down-img-eat"></div>
+													<p class="desc">吃美剧</p>
+												</div>
+											</li>
+											<li>
+												<div class="item-inner">
+													<div class="down-img-32 down-img-fantasy"></div>
+													<p class="desc">范特西</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="item">
+										<p class="desc">资源下载站</p>
+										<ul class="source">
+											<li>
+												<div class="item-inner">
+													<div class="down-img-32 down-img-default"></div>
+													<p class="desc">分享站</p>
+												</div>
+											</li>
+											<li>
+												<div class="item-inner">
+													<div class="down-img-32 down-img-magent"></div>
+													<p class="desc">磁力站</p>
+												</div>
+											</li>
+											<li>
+												<div class="item-inner">
+													<div class="down-img-32 down-img-yyets"></div>
+													<p class="desc">深影论坛</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="item">
+										<p class="desc">字幕下载</p>
+										<ul class="source">
+											<li>
+												<div class="item-inner">
+													<div class="down-img-32 down-img-zimuzu"></div>
+													<p class="desc">字幕组原创</p>
+												</div>
+											</li>
+											<li>
+												<div class="item-inner">
+													<div class="down-img-32 down-img-shooter"></div>
+													<p class="desc">射手网</p>
+												</div>
+											</li>
+											<li>
+												<div class="item-inner">
+													<div class="down-img-32 down-img-DB"></div>
+													<p class="desc">电波字幕组</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>-->
+							<ul class="down-way">
+								<li>
+									<div class="item">
+										<i class="fa fa-film"></i>
+										<span class="desc">站外资源</span>
+									</div>
+								</li>
+								<li>
+									<div class="item">
+										<i class="fa fa-language"></i>
+										<span class="desc">字幕下载</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					<div class="panel-inner">
+						<div class="panel-inner-heading">
+							<span class="desc">互动交流</span>
+							<span class="right" > 
+								<a href="#" class="ctrl">写剧评 <i class="fa fa-plus-circle"></i></a>
+								<a href="#" class="ctrl">写长篇评论 <i class="fa fa-plus-circle"></i></a>
+							</span>
+						</div>
+						<div class="panel-inner-body">
+							<div class="comment-edit-wrapper">
+								<textarea class="comment-textarea" placeholder="请填写评论..." rows="3" ></textarea>
+								<button class="comment-btn btn"><span class="desc">发表评论</span></button>
+							</div>
+							
+							<ul class="comment-list">
+								<li>
+									<div class="comment-item">
+										<div class="comment-title">
+											<div class="comment-title-left">
+												<div class="user-head">
+													<img src="../lib/style/images/head/header.jpg" alt=""/>
+												</div>
+												<a href="#" class="user-name">aYin</a>
+												<span class="user-class">至尊会员</span>
+											</div>
+											<div class="comment-title-right">
+												<span class="date">今天 12:22</span>
+												<span class="hot">Hot</span>
+											</div>
+										</div>
+										<div class="comment-body">
+											<p>发生不好的事情不要怨天尤人的，如果一定要追踪源头也不是snow的问题，而是布兰发出的警告导致的。</p>
+											<p>龙母不去救snow一行人，那就不知道夜魔有着这样的能力，知己知彼方能百战百胜，这次龙的陨落也给龙母提了个醒，自己不是无敌的。不管面对兰尼斯特还是夜魔。我猜测布兰应该是知道后续的发展（包括龙的死亡和被复活），但是时间线是不允许改动的，不管是已经发生的还是将要发生的。</p>
+										</div>
+										<div class="comment-ctrl">
+											<a href="#"><i class="fa fa-reply"></i>回复</a>
+											<a href="#"><i class="fa fa-thumbs-up"></i>赞<span class="badge">22</span></a>
+											<a href="#"><i class="fa fa-user-secret"></i>举报</a>
+										</div>
+										
+										<div class="comment-sub">
+											<div class="comment-item">
+												<div class="comment-title">
+													<div class="comment-title-left">
+														<div class="user-head">
+															<img src="../lib/style/images/head/putin.png" alt=""/>
+														</div>
+														<a href="#" class="user-name">Putin</a>
+														<span class="user-class">普通会员</span>
+													</div>
+													<div class="comment-title-right">
+														<span class="date">今天 12:22</span>
+													</div>
+												</div>
+												<div class="comment-body">
+													<p>发生不好的事情不要怨天尤人的，如果一定要追踪源头也不是snow的问题，而是布兰发出的警告导致的。</p>
+												</div>
+											</div>
+											<div class="comment-item">
+												<div class="comment-title">
+													<div class="comment-title-left">
+														<div class="user-head">
+															<img src="../lib/style/images/head/obama.png" alt=""/>
+														</div>
+														<a href="#" class="user-name">Obama</a>
+														<span class="user-class">高级会员</span>
+													</div>
+													<div class="comment-title-right">
+														<span class="date">今天 12:22</span>
+													</div>
+												</div>
+												<div class="comment-body">
+													<p>龙母不去救snow一行人，那就不知道夜魔有着这样的能力，知己知彼方能百战百胜，这次龙的陨落也给龙母提了个醒，自己不是无敌的。不管面对兰尼斯特还是夜魔。</p>
+												</div>
+											</div>
+											
+											
+										</div>
+										
+									</div>
+								</li>
+								
+								<li>
+									<div class="comment-item">
+										<div class="comment-title">
+											<div class="comment-title-left">
+												<div class="user-head">
+													<img src="../lib/style/images/head/trump.png" alt=""/>
+												</div>
+												<a href="#" class="user-name">Trump Something</a>
+												<span class="user-class">普通会员</span>
+											</div>
+											<span class="admin-ctrl">
+												<a href="#"><i class="fa fa-trash"></i>删除</a>
+												<a href="#"><i class="fa fa-ban"></i>禁止</a>
+											</span>
+											<div class="comment-title-right">
+												<span class="date">今天 12:22</span>
+												<span class="floor">#1</span>
+											</div>
+										</div>
+										<div class="comment-body">
+											<p>第7季简直糟糕！！小恶魔从到龙妈身边出的主意没有一个不坑的！坑队友！坑龙！完全没有在君临那种精彩的表现！！不是间谍是什么？？？</p>
+										</div>
+										<div class="comment-ctrl">
+											<a href="#"><i class="fa fa-reply"></i>回复</a>
+											<a href="#"><i class="fa fa-thumbs-up"></i>赞<span class="badge">22</span></a>
+											<a href="#"><i class="fa fa-user-secret"></i>举报</a>
+										</div>
+									</div>
+								</li>
+								
+								<li>
+									<div class="comment-item">
+										<div class="comment-title">
+											<div class="comment-title-left">
+												<div class="user-head">
+													<img src="../lib/style/images/head/hepburn.png" alt=""/>
+												</div>
+												<a href="#" class="user-name">Audrey Hepburn</a>
+												<span class="user-class">高级会员</span>
+											</div>
+											<div class="comment-title-right">
+												<span class="date">今天 12:22</span>
+												<span class="floor">#2</span>
+											</div>
+										</div>
+										<div class="comment-body">
+											<p>我觉得S7E7中瑟曦囚禁龙母，在S8中龙母会死掉，斯诺也会死掉。Arya会杀死瑟曦，小指头会当国王。在冰与火的世界中，谁为老百姓谁就会死。</p>
+										</div>
+										<div class="comment-ctrl">
+											<a href="#"><i class="fa fa-reply"></i>回复</a>
+											<a href="#"><i class="fa fa-thumbs-up"></i>赞<span class="badge">22</span></a>
+											<a href="#"><i class="fa fa-user-secret"></i>举报</a>
+										</div>
+									</div>
+								</li>
+								
+							</ul>
+							
+						</div>
+					</div>
+					
+					
+					
+					
+				</div>
+				<div class="col-xs-3 col-sidebar">
+					<div class="siderbar-wrapper">
+					<div class="panel-inner">
+						<div class="panel-inner-heading">
+							<span class="desc">同类影片 </span>
+							<span class="right" > 
+								<a class="ctrl more">更多 <i class="fa fa-chevron-circle-right"></i></a>
+							</span>
+						</div>
+						<div class="panel-inner-body">
+							<ul class="play-list play-list-col3">
+		                        <li>
+		                            <div class="img-item">
+		                                <div class="tags">
+											<span class="name">美国</span>
+											<span class="type">影视剧</span>
+										</div>
+		                                <img src="../lib/style/images/tvplay/tvplay1.jpg" alt="">
+		                            </div>
+		                            <p class="name-chs">行尸走肉</p>
+		                            <p class="name-eng">Walking Dead</p>
+		                        </li>
+		                        <li>
+		                            <div class="img-item">
+		                            		<div class="tags">
+											<span class="name">中国</span>
+											<span class="type">电影</span>
+										</div>
+		                                <img src="../lib/style/images/movies/movie7.jpg" alt="">
+		                            </div>
+		                            <p class="name-chs">湄公河行动</p>
+		                        </li>
+		                        <li>
+		                            <div class="img-item">
+		                            		<div class="tags">
+											<span class="name">美国</span>
+											<span class="type">电影</span>
+										</div>
+		                                <img src="../lib/style/images/movies/movie2.jpg" alt="">
+		                            </div>
+		                            <p class="name-chs">黑夜传说3</p>
+		                            <p class="name-eng">Underworld: Rise of the Lycans</p>
+		                        </li>
+		                        <li>
+		                            <div class="img-item">
+		                            		<div class="tags">
+											<span class="name">美国</span>
+											<span class="type">电影</span>
+										</div>
+		                                <img src="../lib/style/images/movies/movie3.jpg" alt="">
+		                            </div>
+		                            <p class="name-chs">刺客信条</p>
+		                            <p class="name-eng">Assassin's Creed</p>
+		                        </li>
+		                        <li>
+		                            <div class="img-item">
+		                            		<div class="tags">
+											<span class="name">美国</span>
+											<span class="type">影视剧</span>
+										</div>
+		                                <img src="../lib/style/images/tvplay/tvplay4.jpg" alt="">
+		                            </div>
+		                            <p class="name-chs">全境通告</p>
+		                            <p class="name-eng">A.P.B.</p>
+		                        </li>
+		                        <li>
+		                            <div class="img-item">
+		                            		<div class="tags">
+											<span class="name">美国</span>
+											<span class="type">影视剧</span>
+										</div>
+		                                <img src="../lib/style/images/tvplay/tvplay5.jpg" alt="">
+		                            </div>
+		                            <p class="name-chs">世界上最后一个男人</p>
+		                            <p class="name-eng">The Last Man on Earth</p>
+		                        </li>
+		                        <li>
+		                            <div class="img-item">
+		                            		<div class="tags">
+											<span class="name">美国</span>
+											<span class="type">影视剧</span>
+										</div>
+		                                <img src="../lib/style/images/tvplay/tvplay6.jpg" alt="">
+		                            </div>
+		                            <p class="name-chs">衰姐们</p>
+		                            <p class="name-eng">Girls</p>
+		                        </li>
+		                        <li>
+		                            <div class="img-item">
+		                            		<div class="tags">
+											<span class="name">英国</span>
+											<span class="type">影视剧</span>
+										</div>
+		                                <img src="../lib/style/images/tvplay/tvplay7.jpg" alt="">
+		                            </div>
+		                            <p class="name-chs">开心汉堡店</p>
+		                            <p class="name-eng">Bob's Burgers</p>
+		                        </li>
+		                        <li>
+		                            <div class="img-item">
+		                            		<div class="tags">
+											<span class="name">美国</span>
+											<span class="type">影视剧</span>
+										</div>
+		                                <img src="../lib/style/images/tvplay/tvplay8.jpg" alt="">
+		                            </div>
+		                            <p class="name-chs">亿万</p>
+		                            <p class="name-eng">Billions</p>
+		                        </li>
+	                    		</ul>
+							
+							
+						</div>
+					</div>
+					
+					<div class="panel-inner">
+						<div class="panel-inner-heading">
+							<span class="desc">相关资讯</span>
+							<span class="right" > 
+								<a class="ctrl more">更多 <i class="fa fa-chevron-circle-right"></i></a>
+							</span>
+						</div>
+						<div class="panel-inner-body">
+							<ul class="info-list-side">
+								<li>
+									<img src="../lib/style/images/info/info31.jpg" alt="" />
+									<span class="type">资讯</span>
+									<span class="title">小恶魔和雪伊那段情, 终于还是败给了宿命</span>
+									<span class="writer">文/茜红柿</span>
+									<span class="date">2天前</span>
+								</li>
+								<li>
+									<span class="type">资讯</span>
+									<span class="title">《权力的游戏》之捉鬼小分队：那些恩怨纠葛的往事</span>
+									<span class="writer">文/良梁</span>
+									<span class="date">3天前</span>
+								</li>
+								<li>
+									<span class="type">资讯</span>
+									<span class="title">《权力的游戏》第七季第六集解析：夜王擒龙，内外交困</span>
+									<span class="writer">文/LIANG</span>
+									<span class="date">3天前</span>
+								</li>
+								<li>
+									<span class="type">资讯</span>
+									<span class="title">《权力的游戏》S7E6：长城内外，惟余莽莽</span>
+									<span class="writer">文/aYin</span>
+									<span class="date">5天前</span>
+								</li>
+								<li>
+									<span class="type">资讯</span>
+									<span class="title">《权力的游戏》最新：打野小分队深入敌后，火龙陨落，异鬼来袭</span>
+									<span class="writer">文/aYin</span>
+									<span class="date">1月前</span>
+								</li>
+							</ul>
+							<!--暂时用不到
+							<ul class="ctrl-btn">
+								<li><a  href="#">写剧评<i class="fa fa-plus-circle"></i></a></li>
+								<li><a href="#">写长评论<i class="fa fa-plus-circle"></i></a></li>
+							</ul>-->
+						</div>
+					</div>
+					
+					
+					<div class="panel-inner">
+						<div class="panel-inner-heading">
+							<span class="desc">相关求档</span>
+							<span class="right" > 
+								<a class="ctrl more">发布求档 <i class="fa fa-edit"></i></a>
+							</span>
+						</div>
+						<div class="panel-inner-body">
+							<ul class="info-list-side">
+								<li>
+									<span class="title">求权力的游戏 BD-1080P或者BD-720P S06E06/S06E09/S06E10 迅雷链接无法下载</span>
+									<span class="date">2天前</span>
+								</li>
+								<li>
+									<span class="title">权力游戏的第七季第五第六集为何无法下载，求助！</span>
+									<span class="date">3天前</span>
+								</li>
+								<li>
+									<span class="title">HR HDTV S07E04 下載不了,可以解決一下嗎?</span>
+									<span class="date">3天前</span>
+								</li>
+								<li>
+									<span class="title">《权力的游戏》S7E6：长城内外，惟余莽莽</span>
+									<span class="date">5天前</span>
+								</li>
+								<li>
+									<span class="title">《权力的游戏》最新：打野小分队深入敌后，火龙陨落，异鬼来袭</span>
+									<span class="date">1月前</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="panel-inner">
+						<div class="panel-inner-heading">
+							<span class="desc">本区活跃会员</span>
+						</div>
+						<div class="panel-inner-body">
+							<ul class="user-list-side">
+								<li>
+									<div class="user-head">
+										<img src="../lib/style/images/head/header.jpg" alt="" />
+									</div>
+									<span class="user-name">aYin</span>
+									<span class="user-class">至尊会员</span>
+									<span class="desc">37条评论</span>
+								</li>
+								<li>
+									<div class="user-head">
+										<img src="../lib/style/images/head/trump.png" alt="" />
+									</div>
+									<span class="user-name">Donald Trump</span>
+									<span class="user-class">普通会员</span>
+									<span class="desc">26条评论</span>
+								</li>
+								<li>
+									<div class="user-head">
+										<img src="../lib/style/images/head/hepburn.png" alt="" />
+									</div>
+									<span class="user-name">Audrey Hepburn</span>
+									<span class="user-class">高级会员</span>
+									<span class="desc">18条评论</span>
+								</li>
+								<li>
+									<div class="user-head">
+										<img src="../lib/style/images/head/obama.png" alt="" />
+									</div>
+									<span class="user-name">Barack Hussein Obama</span>
+									<span class="user-class">高级会员</span>
+									<span class="desc">21条评论</span>
+								</li>
+								<li>
+									<div class="user-head">
+										<img src="../lib/style/images/head/putin.png" alt="" />
+									</div>
+									<span class="user-name">Putin</span>
+									<span class="user-class">普通会员</span>
+									<span class="desc">21条评论</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					</div>
+				</div>
+			</div><!--row end-->
+		</div><!--ui-limit end-->
+	</div><!--ui-content end-->
+	
+	<div class="ui-footer ui-footer-simple">
+		<div class="copyright">
+			<p>YYeTs人人影视 2006-2017 © All Rights Reserved.</p>
+			<p>神盾信息有限公司 (香港) Shield Technologies Limited 联系邮箱：shield.hk@gmail.com</p>
+		</div>
+	</div>
+	
+	<div class="hidden">
+		
+	</div>
+	
+</body>
+</html>
+<script src="../lib/init/loadFiles-after.js"></script>
+<script>
+function addfav(){
+	if($(".favorite").hasClass("active")){
+		$(".favorite").removeClass("active").html("<i class='fa fa-star-o'></i><span class='desc'>添加到收藏夹</span>");
+	}else{
+		$(".favorite").addClass("active").html("<i class='fa fa-star'></i><span class='desc'>已添加收藏夹</span>");
+		
+	}
+}
+function brief_showall(){
+	if($('.brief-wrapper').hasClass('brief-all')){
+		$(".brief-showall").html("展开全文 <i class='fa fa-chevron-circle-down'></i>")
+		$('.brief-wrapper').removeClass('brief-all');
+	}else{
+		$(".brief-showall").html("折叠全文 <i class='fa fa-chevron-circle-up'></i>")
+		$('.brief-wrapper').addClass('brief-all');
+	}
+}
+function pic_showall(){
+	if($(".related-pic").hasClass("related-pic-all")){
+		$(".pic-showall").html("展开全部 <i class='fa fa-chevron-circle-down'></i>")
+		$(".related-pic").removeClass("related-pic-all")
+	}else{
+		$(".pic-showall").html("折叠全部 <i class='fa fa-chevron-circle-up'></i>")
+		$(".related-pic").addClass("related-pic-all")
+	}
+}
+$(function(){
+	
+	$(".tograde .stars .fa").on("mouseenter",function(){
+		$(this).prevAll().add(this).removeClass("fa-star-o");
+		$(this).prevAll().add(this).addClass("active fa-star");
+		$(this).nextAll().removeClass("active fa-star");
+		$(this).nextAll().addClass("fa-star-o");
+	});
+	$(".tograde .stars .fa").on("click",function(){
+		$(this).addClass("this");
+		$(this).siblings().removeClass("this");
+		$(this).parent().addClass("tograde-done");
+		$(this).prevAll().add(this).removeClass("fa-star-o");
+		$(this).prevAll().add(this).addClass("active fa-star");
+		$(this).nextAll().removeClass("active fa-star");
+		$(this).nextAll().addClass("fa-star-o");
+	});
+	$(".tograde .stars").on("mouseleave",function(){
+		if($(this).hasClass("tograde-done")){
+			$(this).find(".this").prevAll().add(".this").removeClass("fa-star-o").addClass("fa-star active");
+			$(this).find(".this").nextAll().removeClass("active fa-star").addClass("fa-star-o");
+		}else{
+			$(this).find(".fa").removeClass("active fa-star").addClass("fa-star-o");
+		}
+	});
+})
+
+
+$(window).load(function(){
+	$.timer.set("brief",function(){
+		if($(".brief").height()>$(".brief-wrapper").height()){
+		}else{
+			$(".showall").addClass("hidden");//当简介高度小于容器最大高度时候隐藏“显示所有简介”
+			
+		}
+		if($(".related-pic").children().size()<6){
+			$(".pic-showall").addClass("hidden");//当相关图片少于6张时候，隐藏“显示所有图片”
+		}
+		//alert($(".brief").height()+" "+$(".brief-wrapper").height())
+	},1000)
+});
+
+</script>

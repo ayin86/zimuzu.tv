@@ -39,8 +39,8 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
 //.badge-vip{background-color: red;}
 
 //body{background-color: @gy-l1;}
+img{.bdr(2px);}
 /*header css start*/
-
 
 .ui-limit{  width: 1200px; margin:0 auto; position: relative;}
 .ui-header{background-color:fade( @bl-m8,95%); height:60px; position: fixed; top:0;left:0; width: 100%; min-width: 1200px; z-index: 99;
@@ -252,8 +252,17 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         }
     }
   }
+  &.play-list-col2{li{width:50%;}}
   &.play-list-col4{li{width:25%;}}
-  &.play-list-col3{li{width:33.33333333333%;>.name{}}}
+  &.play-list-col3{li{width:33.33333333333%;>.name{}
+    .img-item{
+         img{height:120px;}
+         .tags{
+             >.name{top:40px;}
+             >.type{top:60px;}
+         }
+     }
+  }}
   &.play-list-col2{li{width:50%;>.name{}}}
   &.play-list-topdown{
       >li{
@@ -783,8 +792,8 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
     }
 }
 
-.filter-wrapper{background-color: @bl-m8; padding:15px;
-    .tips{background-color: @bl-m7; margin:-15px -15px 0 -15px; padding:10px;
+.filter-wrapper{background-color: @bl-m8; padding:15px; .bdr(5px);
+    .tips{background-color: @bl-m7; margin:-15px -15px 0 -15px; padding:10px; .bdr(5px 5px 0 0);
         li{text-align: center; font-size: 1.2rem; line-height: 3rem;  color:@bl-m2;
             .mark{font-style: normal; .bg-tr; color:@wh;  }
             &.login-tip{font-size: 1.2rem;}
@@ -854,36 +863,359 @@ colors=["re","ro","or","oy","ye","yc","ch","cg","gr","ga","aq","ac","cy","cb","b
         &.active{a{background-color: @bl-m7;}}
     }
 }
+
+.panel-film-detial{.bdr(0); box-shadow:none; margin: 0;
+    .panel-heading{.bdr(0);position: relative; background-color:  @bl-m8; .bdr(5px); border: 1px solid @gy-l2; padding:10px 20px;
+        h3{margin:10px 0; color:@bk;.thidden; padding-right: 280px; color:@wh;} 
+        .desc{margin-bottom:10px; .thidden; padding-right: 280px;color:@wh}
+        .siterank{position: absolute; right:10px; top:10px; text-align: center; background-color: @bl-m9; .ani; padding: 10px; color:@wh; line-height: 2rem; .bdr(5px);
+            .mark{display:block; font-style: normal; font-weight: bold;  font-size: 1.6rem; line-height: 2rem; color:@wh; .bg-tr; padding:0; }
+        }
+        .tip{position: absolute; right:100px;width: 190px; top:10px;text-align: center; font-size: 1.2rem; .bdr(5px); background-color: @bl-m9;
+            p{margin: 0; line-height: 2.7rem; padding:0 10px; color:@wh;
+                &.update{border-bottom: 1px solid @bl-m8;}
+                &.date{}
+            }
+        }
+    }
+    .panel-body{padding:20px 0;
+        .col-right{position: relative;
+            &:before{content:" ";display:block; position: absolute; border-left: 1px solid @gy-l1; bottom:0; left:0; top:0;}
+        }
+        .film-detial-wrapper{position: relative; 
+            .film-cover{position: absolute; left:0; top:0;
+                img{ width: 190px; height:240px; object-fit: cover;}
+                .renew{position: absolute; top:-8px; left:10px; font-size: 4rem; color:@re-l5;
+                    .desc{position: absolute; .fullbox; font-size: .8rem; color:@wh; text-align: center; line-height: 1.2rem; padding:5px;}
+                }
+                .favorite{position: absolute;.bdr; height:40px;line-height:40px; text-align: center;.ani; cursor: pointer; background-color: @gy-l2; color:@gy-m8; bottom:-50px; font-size: 1.2rem; left:0; right:0;
+                    .fa{margin-right: 5px;}
+                    .desc{}
+                    &:hover{background-color: @gy-l4;}
+                    &.active{background-color: @or-l4; color:@wh;}
+                }
+            }
+            .film-detail{font-size: 0; margin-left: 210px;
+                li{display:inline-block; width: 100%; font-size: 1rem; position: relative;
+                    &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6){width: 50%;}
+                    &:last-child{white-space: normal;}
+                    .label{color:@gy-d8; font-size: 1.05rem; position: absolute; left:0; top:0; }
+                    .desc{color:@gy-d8; font-size: 1.05rem; margin-left: 60px;  display:inline-block; float: left;}
+                }
+            }
+        }
+        .grade{font-size: 2.3rem; line-height: 3rem; margin-bottom: 10px;
+            .fa{color:@or-l4;}
+            .score{font-size: 2.6rem; font-family: "arial black"; text-align: right; float: right;
+                .point{}
+            }
+        }
+        .grade-detail{.fixfloat;margin:0 15px;
+            li{padding:2px 0;
+                >div{padding:0; 
+                    .chart-bar{position: relative; border: 1px solid @gy-l2;
+                        .bar{background-color: @gy-l2; height:20px;}
+                        .numbers{position: absolute; .fullbox; color:@bk; 
+                            span{
+                                &.percent{}
+                                &.vote{color:@gy-m5; position: absolute; right:5px; top:0;}
+                            }
+                        }
+                    }
+                    &.desc{text-align: left;}
+                    &.chart{text-align: center;}
+                }
+            }
+        }
+        .state{font-size: 0; margin:10px 0;
+            li{display:inline-block; width: 50%; font-size: 1rem; line-height: 20px;
+                .label{color:@gy-m5; font-size:1rem; padding:0;}
+                .count{}
+                &.fav{text-align: right;
+                    .label{
+                        &:before{.fa; content:"\f005"; margin-right: 5px;}
+                    }
+                }
+                &.view{text-align: left;
+                    .label{
+                        &:before{.fa; content:"\f06e"; margin-right: 5px;}
+                    }
+                }
+            }
+        }
+        .tograde{.bdr(5px); background-color: @gy-l1; padding:10px 0;
+            .desc{text-align: center; margin: 0;
+                .count{}
+            }
+            .stars{font-size: 1.5rem; text-align: center;cursor: pointer; 
+                .fa{.ani;
+                    &.active{color:@or-l4;}
+                }
+            }
+        }
+    }
+}
+.panel-inner{margin-bottom: 20px; border:1px solid transparent;
+    .panel-inner-heading{
+        position: relative; text-align: center; padding:20px 0;
+        &:before{position: absolute; top:50%;left:0; right:0;border-bottom: 1px solid @gy-l2; height:0; content:" "; font-size: 0; }
+        .desc{ padding:0 10px; position: relative; z-index: 10; background-color: @wh; font-size: 1.3rem;  display:inline-block; color:@gy-d8;}
+        .right{position: absolute; right:0px; background-color: @wh; z-index: 10; padding-left:0px;
+            .ctrl{padding:0 0 0 10px; color:@gy-m5; .ani;
+                &:hover{color:@bl-l5;}
+            }
+        }
+    }
+    .panel-inner-body{}
+}
+
+.film-brief{
+    .brief-wrapper{max-height:120px;overflow: hidden;
+        p{ color:@bk; font-size: 1.1rem; text-indent: 2rem;}
+        &.brief-all{max-height:none;}
+    }
+}
+.related-pic{font-size: 0; margin:-10px; overflow: hidden; white-space: nowrap;
+    li{height:200px; width:20%; display:inline-block;font-size: 1rem;padding:10px; overflow: hidden;
+        img{width: 100%; height: 100%;  object-fit: cover; .ani; cursor: pointer; }
+        &:hover{
+            img{ transform: scale(1.05); opacity: .8;}
+        }
+    }
+    &.related-pic-all{white-space: normal;}
+}
+.down-way-wrapper{ display:table;  margin:30px -10px;
+    li{font-size: 1rem; display: table-cell; width: 1%; float: none; padding:10px; text-align: center;
+        .item{background-color: @bl-m7; .bdr(5px);
+            >.desc{color:@bl-m3; padding:10px 10px 0 10px; margin: 0; font-size: 1.4rem;}
+            .source{display:table; width: 100%; padding:5px;
+               li{ text-align: center; .thidden; color: @wh;  padding:5px;
+                .item-inner{ background-color:fade( @bl-m8,90%); padding:10px 0;  .bdr(5px);
+                    img{}
+                    .desc{margin: 0; color:@bl-m5;}
+                }
+               }
+            }
+        }
+    }
+}
+
+
+.down-way{font-size: 0; margin:-10px;
+    li{width: 50%; display:inline-block; padding:10px;
+        .item{background-color: @bl-m7; .ani; text-align: center; cursor: pointer; font-size: 2rem; line-height: 5rem; .bdr; overflow: hidden; position: relative;
+            .desc{color:@bl-m3;font-weight: bold; .ani; display:inline-block;}
+            .fa{position: absolute; left:15px; top:5px; font-size: 4rem; color:fade(@bl-m8,70%); .ani;}
+            &:hover{background-color:@bl-m6; 
+                .desc{color:@bl-m2; transform: scale(1.1);}
+                .fa{color:@bl-m7;transform: scale(1.5);}
+            }
+        }
+    }
+}
+.ctrl-btn{display:table; margin:-5px;
+    li{display:table-cell; width: 1%; float:none; padding:5px;
+        a{display:block; text-align: center; padding:5px 0; border: 1px solid @bl-l5; color:@bl-l5; .bdr; .ani;
+            .fa{padding-left:5px;}
+        }
+        &:hover{
+            a{background-color: @bl-l5; color:@wh;}
+        }
+    }
+}
+.info-list-side{ margin:-10px -10px 0 -10px;
+    li{padding:10px; border-bottom: 1px dotted @gy-l2; .ani;  cursor: pointer;
+        img{width: 100%; height: 130px; object-fit: cover; margin:5px 0;}
+        p{background-color: @gy-l1; padding:5px; margin: 0;}
+        span{display:inline; line-height: 1.5rem;
+            &.title{color:@bk;}
+            &.type{  color:@bl-l7; font-weight: bold;}
+            &.writer{padding:0 5px; color:@gy-l5;}
+            &.date{ color:@gy-l5;}
+        }
+        &:hover{background-color: @gy-l1;}
+    }
+}
+.comment-edit-wrapper{ padding:0 11rem 0 0; position: relative;
+    .comment-textarea{height:6rem; border: 1px solid @gy-l5; width: 100%; .bdr(5px); resize: none; padding: 10px;}
+    .comment-btn{position: absolute; border: 1px solid @gy-l5; .ani; background-color: @wh;  width: 10rem; height:6rem; font-size: 1.4rem; right:0; top:0;
+        .desc{display:inline-block; .ani; color:@gy-d5;}
+        &:hover{ border: 1px solid @bl-m9;  background-color:@bl-m7;
+            .desc{ transform: scale(1.1);color:@wh; }
+        }
+    }
+}
+
+.comment-list{  margin:30px 0;
+    li{
+        .comment-item{padding:20px 0;
+            .comment-title{height:40px; padding-left:50px;position: relative; font-size: 1.2rem; line-height: 40px; 
+                &:before{border-bottom: 1px solid @gy-l2; position: absolute; bottom:0px; right:0; left:50px; content:" ";}
+                .comment-title-left{float: left;
+                    .user-head{position: absolute; left:0; top:0; line-height: normal; 
+                        img{height:40px; width:40px; .bdr(25px); }
+                    }
+                    
+                    .user-name{color:@bl-l5;}
+                    .user-class{color:@gy-d9; opacity: 0.5; .ani;padding:2px 4px; .bdr;}
+                    &:hover{
+                        .user-class{opacity: 1;  background-color: @bl-l5;  color:@wh;}
+                    }
+                }
+                .admin-ctrl{padding: 0 5px;
+                    a{padding: 0 5px;
+                        .fa{padding-right: 5px;}
+                    }
+                }
+                .comment-title-right{float: right;
+                    .hot{ background-color: @re-l5; color:@wh; .bdr;padding:2px 4px; font-size: 1rem; }
+                    .floor{ background-color: @gy-l2; .bdr;padding:4px; font-size: 1rem; margin-left:10px;}
+                    .date{color:@gy-m5;}
+                }
+                
+            }
+            .comment-body{ margin:20px 0 10px 0;  // border: 1px solid @gy-l2;  padding:10px;
+                p{color:@bk; font-size: 1.1rem;
+                    &:last-child{margin: 0;}
+                }
+            }
+            .comment-ctrl{ margin: 0 -10px;
+                a{padding: 0 10px; color:@gy-m5; .ani;
+                    .fa{padding-right: 5px;}
+                    .badge{ margin: 0 5px; padding: 2px 4px; background-color: @gy-l5; .ani;}
+                    &:hover{
+                        color:@bl-l5;
+                        .badge{background-color: @or-l5;}
+                    }
+                }
+            }
+            //sub评论
+            .comment-sub{ padding-top:20px; position: relative; margin-left: 100px;
+                &:before{border-left: 1px solid @gy-l2; position: absolute; left:-30px; top:40px; bottom:30px; content:" ";}
+                .comment-item{
+                    .comment-title{height:20px; padding-left:30px;position: relative; font-size: 1rem; line-height: 20px;
+                        &:before{bottom:-5px; left:30px;}
+                        .user-head{position: absolute; left:0; top:0; line-height: normal;
+                            img{height:20px; width:20px; .bdr(10px); }
+                        }
+                        
+                        .user-name{}
+                        .user-class{}
+                        .admin-ctrl{padding: 0 5px;
+                            a{padding: 0 5px;
+                                .fa{padding-right: 5px;}
+                            }
+                        }
+                        .comment-title-right{float: right;
+                            .floor{ background-color: @gy-l2; .bdr;padding:4px; font-size: 1rem; margin-left:10px;}
+                            .hot{ background-color: @re-l5; color:@wh; .bdr;padding:2px 4px; font-size: 1rem; }
+                            .date{}
+                        }
+                        
+                    }
+                }
+            }//end SUB
+        }
+    }
+}
+
+.user-list-side{
+    li{position: relative; height:60px; padding:10px 0 10px 50px;  .thidden;
+        .user-head{position: absolute; left:0; top:10px; line-height: normal; 
+            img{height:40px; width:40px; .bdr(25px); }
+        }
+        span{
+            &.user-name{color:@bl-l5;}
+            &.user-class{color:@gy-d9;.ani;padding:2px 4px; .bdr;}
+            &.desc{display:block;}
+        }
+        &:hover{
+            .user-class{opacity: 1;  background-color: @bl-l5;  color:@wh;}
+        }
+    }
+}
+
+.col-sidebar{position: relative; 
+    .siderbar-wrapper{background-color: @bl-m7; .bdr; padding:1px 15px;
+        .panel-inner{
+            .panel-inner-heading{
+                &:before{border-bottom: 1px solid @bl-m6;  }
+                .desc{ background-color: @bl-m7; color:@bl-m3; font-weight: bold;}
+                .right{ background-color: @bl-m7;
+                    .ctrl{ color:@bl-m4;
+                        &:hover{color:@bl-l1;}
+                    }
+                }
+            }
+            .panel-inner-body{
+                .play-list-col3{
+                    li{
+                        .img-item{
+                            img{height:100px;}
+                        }
+                        .name-chs{color:@bl-m4;}
+                        .name-eng{color:@bl-m5;}
+                    }
+                }
+                .info-list-side{
+                    li{border-bottom: 1px dotted @bl-m6; 
+                        span{
+                            &.type{color:@bl-m2;}
+                            &.title{color:@bl-m3;}
+                            &.writer{color:@bl-m5;}
+                            &.date{color:@bl-m5;}
+                        }
+                        &:hover{background-color: fade(@bl-m6,50%);}
+                    }
+                }
+                .user-list-side{
+                    li{
+                        span{
+                            &.user-name{color:@bl-m4;}
+                            &.user-class{color:@bl-m5; }
+                            &.desc{color:@bl-m5;}
+                        }
+                        &:hover{
+                            .user-class{ background-color: @bl-m8;  color:@bl-m4;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+      //  &:before{content:" ";display:block; position: absolute; border-left: 1px solid @gy-l1; bottom:0; left:0; top:0;}
+}
+
+
+
 /*
-<div class="film-list">
-    <div class="item">
-        <div class="img-item">
-            <a href="#"><img src="../lib/style/images/tvplay/tvplay16.jpg"/></a>
-            <div class="score">9.8</div>
-        </div>
-        <div class="film-info">
-            <div class="date">3天前 13:02</div>
-            <div class="siterank">本站排名<i class="mark">1</i></div>
-            <p class="title">
-                    <span class="chs">权利的游戏</span>
-                    <span class="eng">Game of Thrones</span>
-                    <span class="year">2011</span>
-                    <span class="season">第7季连载中</span>
-            </p>
-            <p class="sort">
-                    <span class="type">美剧</span>
-                    <span class="class">战争/剧情/魔幻/历史/古装/史诗</span>
-            </p>
-            <p class="stat">
-                    <span class="view">540367666次浏览</span>
-                    <span class="fav">81720次收藏</span>
-                    <span class="start">2011-04-17 首播</span>
-            </p>
-            <p class="desc">
-                    <span>原创翻译双语字幕</span>
-                    <span>更新S07E03</span>
-                    <span>版权原因本站仅提供字幕，http://www.zimuzu.tv/subtitle/53143</span>
-            </p>
-        </div>
-    </div>
-</div>*/
+<ul class="user-list-side">
+    <li>
+        <img src="../lib/style/images/head/trump.png" alt="" />
+        <span class="user-name">whwacn</span>
+        <span class="user-class">至尊会员</span>
+        <span class="desc">26条评论</span>
+    </li>
+</ul> * */
+.down-img-32{width: 32px; height:32px; display:inline-block; background-image: url(../images/source/grid32.png);  background-position: 0 0;
+    &.down-img-thunder{background-position: -132px 0; }
+    &.down-img-yyets{background-position: -66px 0; }
+    &.down-img-zimuzu{background-position: -99px 0; }
+    &.down-img-baidu{background-position: -33px -33px; }
+    &.down-img-tencent{background-position: 0 -33px; }
+    &.down-img-emule{background-position: -66px -33px;}
+    &.down-img-magent{background-position: -99px -33px;}
+    &.down-img-baidu{background-position: -33px -33px;}
+    &.down-img-fantasy{background-position: -99px -66px;}
+    &.down-img-CT{background-position: 0 -66px;}
+    &.down-img-MI{background-position: -132px -33px;}
+    &.down-img-default{background-position: 0 0;}
+    &.down-img-shooter{background-position: 0 -99px;}
+    &.down-img-DB{background-position: -33px -99px;}
+    &.down-img-cloud{background-position: -33px 0;}
+    &.down-img-eat{background-position: -132px -66px;}
+}
+/*
+<div class="film-brief">
+<div class="title"><span class="desc">权力的游戏的剧情简介</span></div>
+ */
